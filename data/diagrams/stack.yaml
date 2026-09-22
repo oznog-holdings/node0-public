@@ -1,0 +1,24 @@
+# The stack: the eleven layers of Node0 and what depends on what. Drawn by tools/diagrams/gen.py.
+# Bands are listed bottom to top; a band holds one layer or two side by side. "spans" draws a layer
+# as a tall band beside the stack (operations) or under it (power).
+title: "The eleven layers, and what rests on what"
+layers:
+  - {n: 1,  slug: site,          name: "Site",              gist: "two rooms, four racks, the inventory"}
+  - {n: 2,  slug: edge,          name: "Edge",              gist: "one fibre, a firewall pair"}
+  - {n: 3,  slug: fabric,        name: "Fabric",            gist: "six switches in three pairs"}
+  - {n: 4,  slug: bootstrap,     name: "Bootstrap",         gist: "names, time, secrets, rebuild"}
+  - {n: 5,  slug: storage,       name: "Storage",           gist: "hub, replica, cluster, offsite"}
+  - {n: 6,  slug: compute,       name: "Compute",           gist: "hypervisors, GPUs, one gateway"}
+  - {n: 7,  slug: services,      name: "Services",          gist: "what a person touches"}
+  - {n: 8,  slug: agents,        name: "Agents and dev",    gist: "who operates it; the sandboxes; the rules"}
+  - {n: 9,  slug: observability, name: "Observability",     gist: "is it working, right now"}
+  - {n: 10, slug: power,         name: "Power and environment", gist: "seven UPS, nine ATS, the room"}
+  - {n: 11, slug: operations,    name: "Operations",        gist: "deploy branch, CI, the inventory as authority"}
+bands:
+  - [services, agents, observability]
+  - [storage, compute]
+  - [bootstrap]
+  - [edge, fabric]
+frame: site          # the layer everything sits inside
+under: power         # the layer everything is fed by
+beside: operations   # the layer that runs across every other

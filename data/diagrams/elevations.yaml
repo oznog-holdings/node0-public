@@ -1,0 +1,357 @@
+source: NetBox export of 20260920
+racks:
+- name: rack0
+  height: 12
+  positioned: []
+  shelf_mounted:
+  - fw1
+  - fw2
+  - gw-tplink1
+  - nexus
+  - ntp1
+  - offsite-dock1
+  - ont1
+  - sw-lan1
+  - sw-wan1
+- name: rack1
+  height: 42
+  positioned:
+  - u: 37.0
+    h: 2.0
+    face: front
+    name: pdu-stepdown1
+    role: Transformer
+  - u: 34.0
+    h: 3.0
+    face: front
+    name: ups1
+    role: UPS
+  - u: 31.0
+    h: 3.0
+    face: front
+    name: ups1-bat1
+    role: UPS battery pack
+  - u: 28.0
+    h: 3.0
+    face: front
+    name: ups1-bat2
+    role: UPS battery pack
+  - u: 25.0
+    h: 3.0
+    face: front
+    name: ups2
+    role: UPS
+  - u: 22.0
+    h: 3.0
+    face: front
+    name: ups2-bat1
+    role: UPS battery pack
+  - u: 19.0
+    h: 3.0
+    face: front
+    name: ups2-bat2
+    role: UPS battery pack
+  - u: 16.0
+    h: 3.0
+    face: front
+    name: ups3
+    role: UPS
+  - u: 13.0
+    h: 3.0
+    face: front
+    name: ups3-bat1
+    role: UPS battery pack
+  - u: 10.0
+    h: 3.0
+    face: front
+    name: ups3-bat2
+    role: UPS battery pack
+  - u: 7.0
+    h: 3.0
+    face: front
+    name: ups4
+    role: UPS
+  - u: 4.0
+    h: 3.0
+    face: front
+    name: ups4-bat1
+    role: UPS battery pack
+  - u: 1.0
+    h: 3.0
+    face: front
+    name: ups4-bat2
+    role: UPS battery pack
+  shelf_mounted: []
+- name: rack2
+  height: 42
+  positioned:
+  - u: 42.0
+    h: 1.0
+    face: front
+    name: ats1
+    role: ATS
+  - u: 42.0
+    h: 1.0
+    face: rear
+    name: sw-fa1
+    role: Switch (data plane)
+  - u: 41.0
+    h: 1.0
+    face: front
+    name: ats2
+    role: ATS
+  - u: 40.0
+    h: 1.0
+    face: rear
+    name: sw-fa2
+    role: Switch (data plane)
+  - u: 38.0
+    h: 1.0
+    face: rear
+    name: sw-cb1
+    role: Switch (data plane)
+  - u: 36.0
+    h: 1.0
+    face: rear
+    name: sw-cb2
+    role: Switch (data plane)
+  - u: 34.0
+    h: 1.0
+    face: front
+    name: dev1
+    role: Dev host
+  - u: 34.0
+    h: 1.0
+    face: rear
+    name: sw-mgmt1
+    role: Switch (management)
+  - u: 33.0
+    h: 1.0
+    face: front
+    name: dev2
+    role: Dev host
+  - u: 29.0
+    h: 4.0
+    face: front
+    name: dev3
+    role: Dev host
+  - u: 29.0
+    h: 4.0
+    face: rear
+    name: dev4
+    role: Dev host
+  - u: 28.0
+    h: 1.0
+    face: front
+    name: prox1
+    role: Hypervisor
+  - u: 27.0
+    h: 1.0
+    face: front
+    name: prox2
+    role: Hypervisor
+  - u: 26.0
+    h: 1.0
+    face: front
+    name: prox3
+    role: Hypervisor
+  - u: 25.0
+    h: 1.0
+    face: front
+    name: prox4
+    role: Hypervisor
+  - u: 23.0
+    h: 1.0
+    face: front
+    name: console1
+    role: KVM / console
+  - u: 21.0
+    h: 2.0
+    face: front
+    name: ceph1
+    role: Storage node
+  - u: 19.0
+    h: 2.0
+    face: front
+    name: ceph2
+    role: Storage node
+  - u: 17.0
+    h: 2.0
+    face: front
+    name: ceph3
+    role: Storage node
+  - u: 15.0
+    h: 2.0
+    face: front
+    name: ceph4
+    role: Storage node
+  - u: 13.0
+    h: 2.0
+    face: front
+    name: ceph5
+    role: Storage node
+  - u: 11.0
+    h: 2.0
+    face: front
+    name: ceph6
+    role: Storage node
+  - u: 9.0
+    h: 2.0
+    face: front
+    name: ceph7
+    role: Storage node
+  - u: 7.0
+    h: 2.0
+    face: front
+    name: ceph8
+    role: Storage node
+  - u: 5.0
+    h: 2.0
+    face: front
+    name: ceph9
+    role: Storage node
+  - u: 1.0
+    h: 4.0
+    face: front
+    name: unraid1
+    role: Unraid server
+  shelf_mounted:
+  - cm1
+  - cm2
+  - cm3
+  - cm4
+  - cm5
+  - cm6
+  - cm7
+  - cmctl1
+  - core1
+  - core2
+  - env1
+  - kvm1
+  - probe1
+  - probe2
+  - rpi1
+  - rpi2
+  - rpi3
+  - rpi4
+  - rpi5
+  - rpi6
+  - rpi7
+  - rpi8
+  - sw-rpi1
+  - sw-rpi2
+  - wallboard1
+- name: rack3
+  height: 42
+  positioned:
+  - u: 42.0
+    h: 1.0
+    face: front
+    name: ats3
+    role: ATS
+  - u: 42.0
+    h: 1.0
+    face: rear
+    name: sw-fb1
+    role: Switch (data plane)
+  - u: 40.0
+    h: 1.0
+    face: rear
+    name: sw-fb2
+    role: Switch (data plane)
+  - u: 38.0
+    h: 1.0
+    face: rear
+    name: sandbox1
+    role: Sandbox
+  - u: 37.0
+    h: 1.0
+    face: rear
+    name: sandbox2
+    role: Sandbox
+  - u: 35.0
+    h: 3.0
+    face: front
+    name: util1
+    role: Utility host
+  - u: 34.0
+    h: 3.0
+    face: rear
+    name: util2
+    role: Utility host
+  - u: 33.0
+    h: 1.0
+    face: rear
+    name: ats4
+    role: ATS
+  - u: 30.0
+    h: 1.0
+    face: rear
+    name: ats5
+    role: ATS
+  - u: 29.0
+    h: 1.0
+    face: rear
+    name: cps-mbp
+    role: Dev host
+  - u: 26.0
+    h: 5.0
+    face: front
+    name: di1
+    role: DI compute
+  - u: 24.0
+    h: 1.0
+    face: rear
+    name: ats6
+    role: ATS
+  - u: 23.0
+    h: 1.0
+    face: rear
+    name: cps-fwl
+    role: Dev host
+  - u: 20.0
+    h: 5.0
+    face: front
+    name: di2
+    role: DI compute
+  - u: 18.0
+    h: 1.0
+    face: rear
+    name: ats7
+    role: ATS
+  - u: 14.0
+    h: 5.0
+    face: front
+    name: di3
+    role: DI compute
+  - u: 12.0
+    h: 1.0
+    face: rear
+    name: ats8
+    role: ATS
+  - u: 8.0
+    h: 5.0
+    face: front
+    name: di4
+    role: DI compute
+  - u: 6.0
+    h: 1.0
+    face: rear
+    name: ats9
+    role: ATS
+  - u: 2.0
+    h: 5.0
+    face: front
+    name: di5
+    role: DI compute
+  shelf_mounted:
+  - agent1
+  - agent2
+  - agent3
+  - agent4
+  - agent5
+  - chp1
+  - chp2
+  - chp3
+  - chp4
+  - clusterhat1

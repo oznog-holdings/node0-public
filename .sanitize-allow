@@ -1,0 +1,4 @@
+# Accepted exceptions for tools/sanitize-check.py, one per line:
+#   rule=<rule> <literal-or-re:regex> # reason of at least three words
+# A literal must equal the whole token the gate matched; a regex must match the whole
+# token. There are no exceptions for images: strip the metadata. Empty as of 20260922.

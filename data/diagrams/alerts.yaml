@@ -1,0 +1,34 @@
+title: "The alert path"
+desc: "A page travels through a machine that is not the one being watched, on a different power feed; a dead-man proves the path by going quiet; an outside vantage point notices when the whole site does."
+kind: flow
+columns:
+  - name: "watched"
+    nodes:
+      - {id: fleet, label: "every host, switch, UPS, strip, sensor", sub: "296 targets, discovered from the inventory"}
+  - name: "the stack, on unraid1"
+    nodes:
+      - {id: prom, label: "Prometheus", sub: "357 alerting rules; each names its runbook and who acts"}
+      - {id: am, label: "Alertmanager", sub: "routes by severity; a permanent heartbeat alert"}
+  - name: "the paging path, on core2"
+    nodes:
+      - {id: ntfy, label: "ntfy on core2", sub: "its own public address; per-host write-only tokens; different box, different feed"}
+      - {id: dm, label: "dead-man on core2", sub: "pages if the heartbeat stops; proven by stopping the stack and timing it"}
+  - name: "who hears it"
+    nodes:
+      - {id: phone, label: "Christoph's phone", sub: "critical pages; warnings in the morning"}
+      - {id: bosun, label: "Bosun on agent6", sub: "reads every notification; acts within its written permissions"}
+  - name: "outside"
+    nodes:
+      - {id: outpost, label: "outpost1, abroad", sub: "no node0 credential; scans the public surface; mails out if core2 goes dark"}
+edges:
+  - {from: fleet, to: prom}
+  - {from: prom, to: am}
+  - {from: am, to: ntfy}
+  - {from: am, to: dm, label: "heartbeat", style: dashed}
+  - {from: ntfy, to: phone}
+  - {from: ntfy, to: bosun}
+  - {from: dm, to: phone, style: dashed}
+  - {from: outpost, to: phone, style: dashed}
+notes:
+  - "An alarm that runs through the machine it watches is not an alarm. The stack lives on the storage hub; the page never does."
+  - "Probes inside the fabric and a canary at the second site record what the network did, so a quiet dashboard can be told from a broken one."

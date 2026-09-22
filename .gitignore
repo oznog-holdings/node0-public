@@ -1,0 +1,9 @@
+public/
+resources/
+.hugo_build.lock
+.DS_Store
+*.orig
+# the names list never lives here
+sanitize-names.txt
+__pycache__/
+*.pyc

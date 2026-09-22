@@ -1,0 +1,299 @@
+# node0 capacity and inventory figures, 20260921.
+#
+# One file, read by the numbers strip on both sites and the layer figures. The diagram data
+# files under data/diagrams/ carry their own labels and are checked against this file by hand
+# at each capture; the generator does not read it.
+# Every row names its source and its date. Nothing here is a hand count.
+#
+# Sources:
+#   export    the NetBox nightly export of 20260920 18:45, in the private repo; a live
+#             pull on 20260921 22:30 was identical in every object count
+#   live      a read-only query run from the operator's laptop on 20260921, 22:20 to 22:40 MDT:
+#             the hypervisor API, the cluster and pool status, the GPU driver, the NUT server
+#             on core1, the metrics API
+#   repo      the private repository at the commit of 20260921 (after Bosun's evening commits)
+#   asbuilt   carried from the as-built capture of 20260920 where no live query was possible
+#             tonight; marked so
+#
+# Units: storage is stated in both binary (TiB) and decimal (TB) where the two differ by more
+# than rounding, because the tools report in binary and the labels on the boxes are decimal.
+# The public pages state TiB where the tool reported binary, with the decimal figure in brackets
+# once per page (ruling 20260921).
+
+captured: "20260921"
+previous_capture: "20260920"
+
+inventory:
+  source: export
+  date: "20260920"
+  devices_total: 191
+  devices_active: 185
+  devices_offline: 6            # four hardware spares, two ledger pseudo-devices
+  hosts: 71                     # every active device that runs an operating system we operate, by the
+                                # ruling of 20260921: storage, Unraid, hypervisor, DI compute, dev, agent,
+                                # utility, core, firewall, observer, sandbox, environmental hub, wallboard,
+                                # Pi and cluster nodes, the PiKVM. Excluded: two personal laptops that travel,
+                                # the consumer router, two rack displays, the console server,
+                                # the offsite dock, the GPS clock, and anything offline
+  hosts_in_the_two_rooms: 69    # canary1 sits at a second home nearby; outpost1 is a rented VM in another country
+  hosts_previous_rule: 50       # the 20260920 rule, which left out the Pi and cluster nodes and small hosts
+  virtual_machines: 7
+  pi_cluster_nodes: 21
+  sandboxes: 2
+  sites: 3                      # Node0, a second home nearby (the canary), and the external vantage point
+  locations: 5
+  racks: 4
+  rack_fill_percent: {rack1: 93, rack2: 100, rack3: 98, rack0: "shelf-mounted, no positions"}
+  cables_total: 407
+  cables_by_type: {cat6a: 248, power: 126, untyped: 32, cat7: 1}
+  cables_with_colour: 270
+  interfaces: 827
+  ip_addresses: 286
+  prefixes: 31
+  vlans_total: 22
+  vlans_active: 19
+  vlans_reserved: 3
+  inventory_items: 322          # drives, modules, cards
+  device_types: 86
+  power_panels: 1
+  power_feeds: 10               # six at 240 V, four at 120 V
+  environmental_sensors: 11     # plus one hub
+  devices_by_role:
+    storage_node: 9
+    unraid_server: 3
+    hypervisor: 4
+    di_compute: 5
+    dev_host: 10
+    agent_host: 5
+    utility_host: 3
+    core_service: 4
+    firewall: 2
+    observer: 4
+    sandbox: 2
+    switch_data_plane: 12
+    switch_management: 2
+    switch_poe: 2
+    ups: 9
+    ups_battery_pack: 8
+    ats: 9
+    pdu: 9
+    pi_cluster_node: 21
+    kvm_console: 2
+    wallboard: 2
+    display: 2
+
+hypervisors:
+  source: live
+  date: "20260921"
+  nodes: 4
+  threads: 224
+  cores: 112                    # 28 physical cores a node; threads are the hyperthreads (20260922 capture)
+  memory_gib: 2015
+  memory_per_node_gib: 503.75
+  guests: 7
+  guests_named: [agent6, ceph-backup1, debtest1, fin1, llm-gw1, nixtest1, openbao3]
+  headroom:
+    method: "arithmetic, not a tested limit"
+    assumption: "one node held in reserve; 8 GB and 2 vCPU per guest; nothing reserved for the hypervisors; the seven running guests not deducted"
+    usable_memory_gib: 1511
+    guests_at_8gb: 188
+    stated_as: "about 190"
+    cpu_oversubscription_at_that_count: "about 2.3 to 1 over the remaining 168 threads"
+
+storage:
+  # Two figures a builder can size against, both captured 20260922 (ruling: usable on the storage tier,
+  # and everything across every host, the way cores are counted).
+  tier_usable_tib: 987          # what the three storage tiers can hold after their protection schemes:
+                                # Ceph 608 (arithmetic from the pool layouts, 5/7 of the HDD class and 1/3 of
+                                # the flash classes), unraid1 338 (zfs list, used plus available, five pools),
+                                # nexus 41 (the same). 1,085 TB; about 0.96 PiB
+  tier_usable_pib: 0.96
+  all_hosts_disks_tib: 1606     # every disk in every one of the 71 hosts as its OS reports it (lsblk, diskutil,
+                                # Get-PhysicalDisk), 356 disks; fw1 and fw2 at 1 TB each and the four Pi Zeros'
+                                # 16 GB cards from Christoph; guests excluded (their disks live on hosts already
+                                # counted). 1,766 TB; about 1.57 PiB
+  all_hosts_disks_pib: 1.57
+  all_hosts_disks_count: 356
+  raw_total_tib: 1482          # every tier's raw capacity summed: Ceph 916 + the hub's five pools 507.6 (tank 493 + fast, ssd,
+                               # local and flash, about 14.6) + the replica 58.2; before any protection scheme; 20260921 figures
+  raw_total_pib: 1.45
+  ceph:
+    source: live
+    date: "20260921"
+    health: HEALTH_OK
+    hosts: 9
+    osds: 171
+    osds_up: 171
+    osds_in: 171
+    pools: 17
+    placement_groups: 2497
+    raw_tib: 916
+    raw_tb: 1007
+    used_tib: 43.2
+    by_class:
+      hdd: {osds: 72, raw_tib: 794}
+      ssd: {osds: 36, raw_tib: 65}
+      nvme: {osds: 63, raw_tib: 57}
+    usable_estimate:
+      method: "5+2 erasure coding on the HDD tier (5/7 of raw); flash pools three-way replicated (1/3 of raw)"
+      hdd_ec_tib: 567
+      flash_replicated_tib: 41
+      total_tib: 608
+      note: "the as-built's '~650 TiB' applied 5/7 to all of raw, including the replicated flash; 608 is the defensible figure"
+  hub:
+    host: unraid1
+    source: live
+    date: "20260921"
+    pools: 5
+    tank: {layout: "three 10-wide raidz3 groups, mirrored NVMe metadata, Optane log", raw_tib: 493, raw_tb: 542, allocated_tib: 53.8, allocated_tb: 59.1, health: ONLINE}
+    fast: {layout: "mirrored NVMe pair", raw_tb: 2.04, health: ONLINE}
+    ssd: {layout: "six SATA SSDs, raidz2", raw_tb: 12.0, health: ONLINE}
+    local: {raw_tb: 1.96, health: ONLINE}
+    flash: {raw_gb: 33, health: ONLINE}
+    containers: 53
+  replica:
+    host: nexus
+    source: live
+    date: "20260921"
+    tank: {layout: "eight-wide NVMe raidz2", raw_tib: 58.2, raw_tb: 64.0, allocated_tib: 26.4, allocated_tb: 29.1, health: ONLINE}
+    datasets_received: 31
+  offsite:
+    source: asbuilt
+    date: "20260920"
+    restic_repositories: 19
+    usb_drives: 2
+    usb_drive_tb_each: 23.5
+    bucket_hide_window_days: 30
+
+compute:
+  gpu_hosts:
+    source: live
+    date: "20260921"
+    hosts: 8                     # five DI hosts with discrete cards, the two serving laptops, and the workstation (ruling 20260921)
+    cards: 8                     # discrete cards: seven on the DI hosts, one RTX 4070 Ti in the workstation
+    accelerators: 10             # eight cards plus two unified-memory laptops that serve models full time
+    vram_discrete_gib: 148       # 139,224 MiB across the seven DI cards, plus 12 GiB in the workstation
+    memory_for_models_gib: 369   # 148 discrete + 128 unified on the MacBook Pro + 93 shared on the Framework:
+                                 # site-wide model-capable memory. The serving fleet behind the gateway is
+                                 # 357 GiB of it (the workstation card is not behind the gateway); the
+                                 # laptops' memory is shared with the OS, so the usable share is somewhat less
+    by_host:
+      di1: {cards: "2x RTX 4090, 24 GB each", threads: 64, cores: 32, ram_gb: 503}
+      di2: {cards: "2x RTX 3090, 24 GB each, NVLink", threads: 24, cores: 12, ram_gb: 440}
+      di3: {cards: "1x RTX 4090, 24 GB", threads: 32, cores: 16, ram_gb: 125}
+      di4: {cards: "1x RTX 4060 Ti, 8 GB", threads: 24, cores: 12, ram_gb: 125}
+      di5: {cards: "1x RTX 2080 Super, 8 GB", threads: 20, cores: 12, ram_gb: 125}
+      cps-wks: {cards: "1x RTX 4070 Ti, 12 GB", threads: 24, cores: 16, ram_gb: 192, note: "a workstation, not a serving host; on the record, not queried"}
+  serving_laptops:
+    source: live
+    date: "20260921"
+    mbp: {form: "MacBook Pro", cores: 18, unified_memory_gib: 128}
+    fwl: {form: "Framework Laptop 13", threads: 24, cores: 12, ram_gb: 93}
+  gateway:
+    source: repo
+    date: "20260921"
+    address_count: 1
+    aliases: [asr, chat, chat-best, chat-frontier, code, code-local, embed, fast, ocr, ocr-handwriting, ocr-olm, probe, rerank]
+    local_models_named_in_repo: [qwen3.8-27b, qwen3.5-9b, qwen3.5-0.8b, qwen3-coder-next, qwen3-embedding-0.6b, qwen3-reranker-0.6b, GLM-OCR, Chandra]
+    largest_model_served: "gpt-oss-120b, on the MacBook Pro serving laptop"
+  lab:
+    source: export
+    date: "20260920"
+    pi_cluster_nodes: 21
+    turing_pi_modules: 7
+    clusterhat_zeros: 4
+
+power:
+  source: live
+  date: "20260921"
+  ups_units: 4                  # the 5 kVA units in rack 1 that carry racks 2 and 3
+  ups_units_small: 3            # the network room: one each for the two firewalls and the replica. The inventory
+                                # holds nine: a desk unit for the workstation and a bench unit for the lab are not
+                                # part of the site's power design and are left out of every figure (ruling 20260922)
+  ups_rating_each: "5 kVA, 4,800 W at 240 V"
+  capacity_w: 19200
+  ups_output_w: {ups1: 2397, ups2: 2531, ups3: 581, ups4: 886}
+  ups_output_total_w: 6395
+  ups_load_percent: {ups1: 50.4, ups2: 52.8, ups3: 16.4, ups4: 16.2}   # each unit's own load figure, on its own denominator and
+                                                                       # its own sampling moment; not derived from the watt row, and
+                                                                       # on ups3 and ups4 the two disagree by about 200 W
+  rack2_pair_w: 4928
+  rack2_on_one_ups_percent: 102.7     # 4,928 / 4,800; accepted by decision 20260909 at "103%"
+  rack3_pair_w: 1467
+  pdu_infeed_w: {pdu-r2-a: 2632, pdu-r2-b: 2541, pdu-r3-a: 988, pdu-r3-b: 823}
+  pdu_infeed_total_w: 6984
+  meters_note: "the PDU infeed reads about 9% above the UPS output tonight (PDU/UPS 1.09); lesson 5.20 recorded PDU/UPS at 0.93 to 0.97 and set that as the band. Outside the band and in the other direction: open, to be looked into, not explained here"
+  transfer_switches: 9
+  metered_pdus: 4
+  feeds: 10
+
+environment:
+  source: live
+  date: "20260921"
+  rack_inlet_c: 25.9
+  hot_aisle_c: 32.7
+  network_room_rack0_c: 27.0
+  studio_c: 24.4
+  hvac_supply_reading_c: 25.8      # the measured reading at capture, not the setpoint (80 F, 26.7 C)
+  sensor_devices: 11
+  hubs: 1
+
+observability:
+  source: live
+  date: "20260921"
+  targets: 296
+  targets_down: 0
+  rule_groups: 41
+  rules: 387
+  alerting_rules: 357
+  alerting_by_severity: {critical: 77, warning: 259, info: 20, watchdog: 1}
+  dashboards: 15               # generated, repo
+  previous_capture_alerting_rules: 353
+
+services:
+  source: live
+  date: "20260921"
+  documents: 18791
+  photos: 105873
+  videos: 21284
+  containers_on_hub: 53
+  forgejo:
+    source: asbuilt
+    date: "20260920"
+    repositories: 36
+    users: 18
+    runners: 4
+    note: "the forge API was not reachable from the laptop tonight; carried from the capture"
+
+operations:
+  source: repo
+  date: "20260921"
+  commits_since_20260810: 2069
+  commits_by_author: {Rigger: 1834, Bosun: 163, Claude: 27, "export job": 18, "capture job": 16, Christoph: 11}
+  previous_capture_commits: 2024
+  runbooks: 140
+  decision_records: 3
+  lesson_documents: 2
+  nixos_host_directories: 29
+  nixos_configurations: 37     # plus one extendModules variant
+  roles: 14
+
+fleet:
+  source: live
+  date: "20260921"
+  method: "nproc and MemTotal (Linux) or hw.ncpu and hw.memsize (macOS) over ssh, read-only, from the operator's laptop, 20260921; the firewalls were not queried and util1 and cps-wks run Windows, so those four come from Christoph's record of 20260921 (i9-13900H and 32 GiB each; 4 threads and 64 GiB; i9-12900KS, 192 GiB); the four ClusterHAT Zeros from the record; the seven guests, agent6 among them, are inside the hypervisor figures and not added again"
+  hosts_counted: 71           # the same 71 as inventory.hosts; agent6 is a guest and sits inside the hypervisor figures
+  threads: 1235                # logical CPUs: hyperthreads where the CPU has them
+  cores: 735                   # physical cores, captured 20260922 (unique thread_siblings_list on Linux, hw.physicalcpu on macOS;
+                               # fw1/fw2, util1, cps-wks and chp1 to chp4 from the record); the Pis, the Apple machines and the
+                               # Mac minis have no SMT, so cores equal threads there
+  memory_gib: 8588                # the four Pi Zeros' 512 MB each added 20260922, from Christoph
+  memory_tib: 8.39
+  not_counted: "nothing; every host in the count has a figure"
+  by_tier:
+    hypervisors: {hosts: 4, threads: 224, cores: 112, memory_gib: 2015}
+    storage: {hosts: 11, threads: 496, cores: 252, memory_gib: 3950}
+    gpu_and_serving: {hosts: 7, threads: 206, cores: 114, memory_gib: 1543}
+    agents_and_dev: {hosts: 15, threads: 154, cores: 122, memory_gib: 874}   # util1 and cps-wks from the record; agent6 (a guest) not counted here
+    core_and_observers: {hosts: 13, threads: 83, cores: 63, memory_gib: 128}   # the firewalls' 32 GiB each added
+    pi_and_lab: {hosts: 21, threads: 72, cores: 72, memory_gib: 78}

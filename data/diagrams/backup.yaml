@@ -1,0 +1,39 @@
+title: "The backup flow"
+desc: "Every source, the on-site tiers, the off-site tiers, and the restore rehearsal that runs the other way. No arrow ever points back into the box it came from."
+kind: flow
+columns:
+  - name: "sources"
+    nodes:
+      - {id: hosts, label: "laptops and agent hosts", sub: "restic, every two hours; 19 repositories"}
+      - {id: hub, label: "unraid1 pools", sub: "one ZFS snapshot per pool, 02:50, mounted read-only"}
+      - {id: guests, label: "hypervisor guests", sub: "disk-level, nightly 04:45"}
+      - {id: cephfs, label: "CephFS", sub: "the model archive, via a guest"}
+  - name: "on site"
+    nodes:
+      - {id: rest, label: "restic server on unraid1", sub: "append-only"}
+      - {id: rgw, label: "bucket on Ceph", sub: "nearly all of unraid1, 04:00"}
+      - {id: pbs, label: "backup server", sub: "guest archives; a job that pages if it disappears"}
+      - {id: nexus, label: "nexus", sub: "hourly one-way encrypted ZFS receive, 31 datasets"}
+  - name: "off site"
+    nodes:
+      - {id: b2, label: "the offsite bucket", sub: "the small irreplaceable tier, 03:00; 30-day hide window; the writer key is meant to hide, never delete, a scope still to be verified"}
+      - {id: usb, label: "rotating USB pair", sub: "the archive and the repositories, nightly; one drive always away"}
+  - name: "proof"
+    nodes:
+      - {id: verify, label: "daily verify sweep", sub: "does each repository still receive snapshots"}
+      - {id: restore, label: "weekly restore test", sub: "three repositories restored and compared, on a third box"}
+      - {id: replica, label: "replica check", sub: "is nexus still receiving"}
+edges:
+  - {from: hosts, to: rest}
+  - {from: cephfs, to: rest}
+  - {from: hub, to: rgw}
+  - {from: hub, to: b2}
+  - {from: hub, to: usb}
+  - {from: hub, to: nexus}
+  - {from: guests, to: pbs}
+  - {from: rest, to: verify, style: dashed}
+  - {from: rest, to: restore, style: dashed}
+  - {from: nexus, to: replica, style: dashed}
+notes:
+  - "The invariant: a destination never holds a backup that originated from itself. Ceph's landing zone on unraid1 is excluded from the plan that backs unraid1 up into Ceph; the Ceph identity bundle goes off site and never back into Ceph."
+  - "Dashed arrows are checks, not copies. None of the three trusts the others."

@@ -1,0 +1,37 @@
+title: "Power: one panel, seven UPS units, nine transfer switches"
+desc: "Six 240 V feeds leave one panel; four UPS units in rack 1 feed racks 2 and 3 as A and B sides through metered strips and transfer switches; three small UPS units carry the network room. Figures are UPS output on 20260921."
+kind: flow
+columns:
+  - name: "the panel"
+    nodes:
+      - {id: panel, label: "one basement panel", sub: "six 240 V feeds, four 120 V feeds, each its own breaker"}
+  - name: "rack 1: the UPS units"
+    nodes:
+      - {id: ups12, label: "ups1 and ups2", sub: "4,800 W each at 240 V; two battery packs each; 2,397 W and 2,531 W out"}
+      - {id: ups34, label: "ups3 and ups4", sub: "4,800 W each; 581 W and 886 W out"}
+      - {id: small, label: "three small UPS units", sub: "the two firewalls and the replica, in the network room"}
+  - name: "metered strips"
+    nodes:
+      - {id: pdu2, label: "rack 2: A and B strips", sub: "infeed metered; 2,632 W and 2,541 W"}
+      - {id: pdu3, label: "rack 3: A and B strips", sub: "988 W and 823 W"}
+  - name: "transfer switches"
+    nodes:
+      - {id: ats2, label: "ats1, ats2", sub: "rack 2: the single-supply hosts; dual-supply hosts take A and B directly"}
+      - {id: ats3, label: "ats3 to ats9", sub: "rack 3: one per GPU host and utility host"}
+  - name: "the hosts"
+    nodes:
+      - {id: h2, label: "rack 2", sub: "4,928 W across the pair: 103% of one unit on failover, accepted by decision 20260909"}
+      - {id: h3, label: "rack 3", sub: "1,467 W across the pair; headroom held for more GPUs"}
+edges:
+  - {from: panel, to: ups12}
+  - {from: panel, to: ups34}
+  - {from: panel, to: small}
+  - {from: ups12, to: pdu2, label: "A and B"}
+  - {from: ups34, to: pdu3, label: "A and B"}
+  - {from: pdu2, to: ats2}
+  - {from: ats2, to: h2}
+  - {from: pdu3, to: ats3}
+  - {from: ats3, to: h3}
+notes:
+  - "The shutdown design: fifteen minutes of low battery is the sole trigger; storage and hypervisors go down and come back as one unit; core survives a power event because it must be the box that handles it."
+  - "The two meters disagree by design: strips read infeed, UPS units read output. The site quotes UPS output. The power-outage rehearsal, tested by causing the condition, is still pending."

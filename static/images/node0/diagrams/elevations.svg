@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 914 664" width="100%" role="img" aria-labelledby="elev-t elev-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="elev-t">Rack elevations</title><desc id="elev-d">The four racks drawn from the inventory: every positioned device by rack unit, front and rear faces, with the shelf-mounted machines listed under each rack. Rack 0 is shelf-mounted throughout.</desc>
+<defs><marker id="elev-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="elev-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="914" height="664" fill="#0D0D0D"/>
+<text x="18" y="28" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack0  (12U)</text>
+<rect x="18" y="370" width="200" height="132" fill="#181818" stroke="#2A2A2A" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="118.0" y="436.0" font-size="9" fill="#918E88" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">no rack positions recorded</text>
+<text x="14" y="505" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">1</text>
+<text x="14" y="439" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">7</text>
+<text x="218" y="514" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">left: front  right: rear</text>
+<text x="18" y="532" font-size="10" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">shelf-mounted:</text>
+<text x="18" y="546" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">fw1, fw2, gw-tplink1, nexus,</text>
+<text x="18" y="559" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">ntp1, offsite-dock1, ont1, sw-</text>
+<text x="18" y="572" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">lan1, sw-wan1</text>
+<text x="244" y="28" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack1  (42U)</text>
+<rect x="244" y="40" width="200" height="462" fill="#181818" stroke="#2A2A2A" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="240" y="505" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">1</text>
+<text x="240" y="439" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">7</text>
+<text x="240" y="373" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">13</text>
+<text x="240" y="307" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">19</text>
+<text x="240" y="241" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">25</text>
+<text x="240" y="175" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">31</text>
+<text x="240" y="109" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">37</text>
+<rect x="246" y="85.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="98.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">pdu-stepdown1</text>
+<rect x="246" y="107.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="126.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups1</text>
+<rect x="246" y="140.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="159.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups1-bat1</text>
+<rect x="246" y="173.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="192.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups1-bat2</text>
+<rect x="246" y="206.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="225.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups2</text>
+<rect x="246" y="239.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="258.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups2-bat1</text>
+<rect x="246" y="272.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="291.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups2-bat2</text>
+<rect x="246" y="305.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="324.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups3</text>
+<rect x="246" y="338.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="357.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups3-bat1</text>
+<rect x="246" y="371.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="390.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups3-bat2</text>
+<rect x="246" y="404.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="423.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups4</text>
+<rect x="246" y="437.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="456.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups4-bat1</text>
+<rect x="246" y="470.0" width="196" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="251" y="489.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ups4-bat2</text>
+<text x="444" y="514" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">left: front  right: rear</text>
+<text x="244" y="532" font-size="10" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">shelf-mounted:</text>
+<text x="244" y="546" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">none</text>
+<text x="470" y="28" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack2  (42U)</text>
+<rect x="470" y="40" width="200" height="462" fill="#181818" stroke="#2A2A2A" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="466" y="505" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">1</text>
+<text x="466" y="439" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">7</text>
+<text x="466" y="373" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">13</text>
+<text x="466" y="307" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">19</text>
+<text x="466" y="241" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">25</text>
+<text x="466" y="175" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">31</text>
+<text x="466" y="109" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">37</text>
+<rect x="472" y="41.0" width="96" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="49.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats1</text>
+<rect x="572" y="41.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="577" y="49.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sw-fa1</text>
+<rect x="472" y="52.0" width="196" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="60.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats2</text>
+<rect x="572" y="63.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="577" y="71.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sw-fa2</text>
+<rect x="572" y="85.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="577" y="93.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sw-cb1</text>
+<rect x="572" y="107.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="577" y="115.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sw-cb2</text>
+<rect x="472" y="129.0" width="96" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="137.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">dev1</text>
+<rect x="572" y="129.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="577" y="137.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sw-mgmt1</text>
+<rect x="472" y="140.0" width="196" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="148.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">dev2</text>
+<rect x="472" y="151.0" width="96" height="42.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="175.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">dev3</text>
+<rect x="572" y="151.0" width="96" height="42.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="577" y="175.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">dev4</text>
+<rect x="472" y="195.0" width="196" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="203.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">prox1</text>
+<rect x="472" y="206.0" width="196" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="214.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">prox2</text>
+<rect x="472" y="217.0" width="196" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="225.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">prox3</text>
+<rect x="472" y="228.0" width="196" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="236.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">prox4</text>
+<rect x="472" y="250.0" width="196" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="258.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">console1</text>
+<rect x="472" y="261.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="274.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph1</text>
+<rect x="472" y="283.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="296.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph2</text>
+<rect x="472" y="305.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="318.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph3</text>
+<rect x="472" y="327.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="340.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph4</text>
+<rect x="472" y="349.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="362.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph5</text>
+<rect x="472" y="371.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="384.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph6</text>
+<rect x="472" y="393.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="406.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph7</text>
+<rect x="472" y="415.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="428.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph8</text>
+<rect x="472" y="437.0" width="196" height="20.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="450.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">ceph9</text>
+<rect x="472" y="459.0" width="196" height="42.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="477" y="483.5" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">unraid1</text>
+<text x="670" y="514" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">left: front  right: rear</text>
+<text x="470" y="532" font-size="10" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">shelf-mounted:</text>
+<text x="470" y="546" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">cm1, cm2, cm3, cm4, cm5, cm6,</text>
+<text x="470" y="559" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">cm7, cmctl1, core1, core2,</text>
+<text x="470" y="572" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">env1, kvm1, probe1, probe2,</text>
+<text x="470" y="585" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">rpi1, rpi2, rpi3, rpi4, rpi5,</text>
+<text x="470" y="598" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">rpi6, rpi7, rpi8, sw-rpi1, sw-</text>
+<text x="470" y="611" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">rpi2, wallboard1</text>
+<text x="696" y="28" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack3  (42U)</text>
+<rect x="696" y="40" width="200" height="462" fill="#181818" stroke="#2A2A2A" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="692" y="505" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">1</text>
+<text x="692" y="439" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">7</text>
+<text x="692" y="373" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">13</text>
+<text x="692" y="307" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">19</text>
+<text x="692" y="241" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">25</text>
+<text x="692" y="175" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">31</text>
+<text x="692" y="109" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">37</text>
+<rect x="698" y="41.0" width="96" height="9.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="703" y="49.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats3</text>
+<rect x="798" y="41.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="49.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sw-fb1</text>
+<rect x="798" y="63.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="71.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sw-fb2</text>
+<rect x="798" y="85.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="93.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sandbox1</text>
+<rect x="798" y="96.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="104.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">sandbox2</text>
+<rect x="698" y="96.0" width="96" height="31.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="703" y="115.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">util1</text>
+<rect x="798" y="107.0" width="96" height="31.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="126.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">util2</text>
+<rect x="798" y="140.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="148.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats4</text>
+<rect x="798" y="173.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="181.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats5</text>
+<rect x="798" y="184.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="192.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">cps-mbp</text>
+<rect x="698" y="173.0" width="96" height="53.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="703" y="203.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">di1</text>
+<rect x="798" y="239.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="247.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats6</text>
+<rect x="798" y="250.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="258.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">cps-fwl</text>
+<rect x="698" y="239.0" width="96" height="53.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="703" y="269.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">di2</text>
+<rect x="798" y="305.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="313.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats7</text>
+<rect x="698" y="305.0" width="96" height="53.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="703" y="335.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">di3</text>
+<rect x="798" y="371.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="379.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats8</text>
+<rect x="698" y="371.0" width="96" height="53.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="703" y="401.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">di4</text>
+<rect x="798" y="437.0" width="96" height="9.0" fill="#232323" stroke="#2A2A2A" stroke-width="1"/>
+<text x="803" y="445.0" font-size="8.5" fill="#ECEAE6" font-weight="600" text-anchor="start">ats9</text>
+<rect x="698" y="437.0" width="96" height="53.0" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="703" y="467.0" font-size="10" fill="#ECEAE6" font-weight="600" text-anchor="start">di5</text>
+<text x="896" y="514" font-size="8" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">left: front  right: rear</text>
+<text x="696" y="532" font-size="10" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">shelf-mounted:</text>
+<text x="696" y="546" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">agent1, agent2, agent3,</text>
+<text x="696" y="559" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">agent4, agent5, chp1, chp2,</text>
+<text x="696" y="572" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="start">chp3, chp4, clusterhat1</text>
+<text x="896" y="658" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/elevations.yaml (NetBox export of 20260920).</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 424" width="100%" role="img" aria-labelledby="flow-ladder-t flow-ladder-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="flow-ladder-t">The ladder</title><desc id="flow-ladder-d">Six rungs. Each is a complete site; the next is taken when the previous one&#x27;s failure has actually bitten. After rung 3 the ladder branches.</desc>
+<defs><marker id="flow-ladder-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="flow-ladder-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="980" height="424" fill="#0D0D0D"/>
+<text x="18" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 0</text>
+<line x1="18" y1="40" x2="155" y2="40" stroke="#2A2A2A"/>
+<text x="219" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 1</text>
+<line x1="219" y1="40" x2="356" y2="40" stroke="#2A2A2A"/>
+<text x="420" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 2</text>
+<line x1="420" y1="40" x2="557" y2="40" stroke="#2A2A2A"/>
+<text x="621" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 3</text>
+<line x1="621" y1="40" x2="758" y2="40" stroke="#2A2A2A"/>
+<text x="822" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">branches</text>
+<line x1="822" y1="40" x2="959" y2="40" stroke="#2A2A2A"/>
+<path d="M155,96.0 C187.0,96.0 187.0,112.0 219,112.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M356,112.0 C388.0,112.0 388.0,103.5 420,103.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M557,103.5 C589.0,103.5 589.0,103.5 621,103.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M758,103.5 C790.0,103.5 790.0,96.0 822,96.0" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M758,103.5 C790.0,103.5 790.0,226.5 822,226.5" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<rect x="18" y="56" width="137" height="80" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the laptop</text>
+<text x="28" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">backups already</text>
+<text x="28" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">running to a bucket;</text>
+<text x="28" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">cost 0</text>
+<rect x="219" y="56" width="137" height="112" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="229" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the infrastructure</text>
+<text x="229" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">box</text>
+<text x="229" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">all-flash Unraid, ZFS</text>
+<text x="229" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">pools, DNS and time,</text>
+<text x="229" y="139" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the gateway, a UPS;</text>
+<text x="229" y="154" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">1,580 to 2,580</text>
+<rect x="420" y="56" width="137" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="430" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the agent box</text>
+<text x="430" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">NixOS from the repo;</text>
+<text x="430" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">resolves names</text>
+<text x="430" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">without infra; 150 to</text>
+<text x="430" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">1,290</text>
+<rect x="621" y="56" width="137" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="631" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the core box</text>
+<text x="631" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">DNS and NTP primary,</text>
+<text x="631" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">notifications, the</text>
+<text x="631" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">restore rehearsal;</text>
+<text x="631" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">150 to 220</text>
+<rect x="822" y="56" width="137" height="80" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="832" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rung 4: compute</text>
+<text x="832" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">one more backend</text>
+<text x="832" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">behind the gateway;</text>
+<text x="832" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">1,830 to 5,000</text>
+<rect x="822" y="162" width="137" height="129" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="832" y="181" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rung 5: the edge</text>
+<text x="832" y="198" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">and the second</text>
+<text x="832" y="215" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">site</text>
+<text x="832" y="232" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">a real router, a</text>
+<text x="832" y="247" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">replica off the</text>
+<text x="832" y="262" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">property; 600 to</text>
+<text x="832" y="277" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">3,580</text>
+<rect x="24.000000000000007" y="139" width="88.60000000000001" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="68.30000000000001" y="150" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">laptop closes</text>
+<rect x="225.0" y="171" width="82.4" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="266.2" y="182" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">infra outage</text>
+<rect x="426.0" y="154" width="132.0" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="492.0" y="165" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">names still on infra</text>
+<line x1="18" y1="325" x2="962" y2="325" stroke="#2A2A2A"/>
+<text x="18" y="343" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">Rungs 0 to 3 order by failure mode. Rungs 4 and 5 are independent: take the edge before compute, the second site before either, or neither for a long</text>
+<text x="18" y="358" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">time.</text>
+<text x="18" y="388" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">Through rung 3: 1,880 lean, 4,090 full. Through rung 5: 4,310 lean, 12,670 full. US prices checked 20260920.</text>
+<text x="962" y="418" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/ladder.yaml.</text>
+</svg>

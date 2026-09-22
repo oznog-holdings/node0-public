@@ -1,0 +1,40 @@
+title: "Topology: one fibre, a firewall pair, three switch pairs"
+desc: "The fibre lands in the network room and ends at a firewall pair; every host bonds to one MLAG pair inside its own rack; the Ceph back end has a pair of its own; one management switch reaches everything and is dual-homed on purpose."
+kind: flow
+columns:
+  - name: "outside"
+    nodes:
+      - {id: fibre, label: "the fibre", sub: "one provider, one circuit, 10 Gbps hand-off"}
+      - {id: mesh, label: "remote access", sub: "a self-hosted mesh, terminated on both firewalls"}
+      - {id: outpost, label: "outpost1", sub: "outside-in vantage point, abroad"}
+  - name: "network room, rack 0"
+    nodes:
+      - {id: wan, label: "sw-wan1", sub: "the provider hand-off"}
+      - {id: fw, label: "fw1 and fw2", sub: "OPNsense, active and passive; nine CARP groups; all routing to the fabric"}
+      - {id: lan, label: "sw-lan1, nexus, ntp1", sub: "the home side, the replica, the GPS clock"}
+  - name: "server room, rack 2"
+    nodes:
+      - {id: fa, label: "Pair A: sw-fa1, sw-fa2", sub: "the only pair that routes; VARP gateways for the VLANs", lit: true}
+      - {id: cb, label: "Pair C: sw-cb1, sw-cb2", sub: "Ceph back end; jumbo frames; no gateway"}
+      - {id: mgmt, label: "sw-mgmt1", sub: "management and out-of-band; dual-homed to A and B"}
+      - {id: r2hosts, label: "rack 2 hosts", sub: "prox1 to prox4, ceph1 to ceph9, unraid1, dev1 to dev4, core1, core2, the probes, the Pi shelves"}
+  - name: "server room, rack 3"
+    nodes:
+      - {id: fb, label: "Pair B: sw-fb1, sw-fb2", sub: "layer 2 only; 160 Gbps port-channel to Pair A (four 40 Gbps links)"}
+      - {id: r3hosts, label: "rack 3 hosts", sub: "di1 to di5, util1, util2, agent1 to agent5, sandbox1, sandbox2, the serving laptops, the ClusterHAT"}
+edges:
+  - {from: fibre, to: wan}
+  - {from: wan, to: fw}
+  - {from: mesh, to: fw, style: dashed}
+  - {from: fw, to: fa, label: "trunk"}
+  - {from: fw, to: lan}
+  - {from: fa, to: fb, label: "160 Gbps"}
+  - {from: fa, to: r2hosts, label: "one bond per host"}
+  - {from: cb, to: r2hosts, label: "Ceph hosts only"}
+  - {from: fb, to: r3hosts, label: "one bond per host"}
+  - {from: mgmt, to: fa, style: dashed}
+  - {from: mgmt, to: fb, style: dashed}
+  - {from: outpost, to: fw, style: dashed, label: "scans from outside"}
+notes:
+  - "A host bonds to one pair, never across pairs; pairs sit inside a rack, never across racks. Losing Pair A takes the routing plane, accepted in writing."
+  - "The studio, the lab bench and the two Pi shelves hang off Pair A through small switches of their own. No addresses or VLAN numbers are drawn; the fabric page says why."

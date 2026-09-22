@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 497" width="100%" role="img" aria-labelledby="flow-backup-t flow-backup-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="flow-backup-t">The backup flow</title><desc id="flow-backup-d">Every source, the on-site tiers, the off-site tiers, and the restore rehearsal that runs the other way. No arrow ever points back into the box it came from.</desc>
+<defs><marker id="flow-backup-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="flow-backup-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="980" height="497" fill="#0D0D0D"/>
+<text x="18" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">sources</text>
+<line x1="18" y1="40" x2="228" y2="40" stroke="#2A2A2A"/>
+<text x="262" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">on site</text>
+<line x1="262" y1="40" x2="472" y2="40" stroke="#2A2A2A"/>
+<text x="506" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">off site</text>
+<line x1="506" y1="40" x2="716" y2="40" stroke="#2A2A2A"/>
+<text x="750" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">proof</text>
+<line x1="750" y1="40" x2="960" y2="40" stroke="#2A2A2A"/>
+<path d="M228,88.5 C245.0,88.5 245.0,81.0 262,81.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M228,339.0 C245.0,339.0 245.0,81.0 262,81.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M228,179.5 C245.0,179.5 245.0,157.0 262,157.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M228,179.5 C245.0,179.5 245.0,380 257.0,380 L477.0,380 C489.0,380 489.0,111.0 506,111.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M228,179.5 C245.0,179.5 245.0,380 257.0,380 L477.0,380 C489.0,380 489.0,232.0 506,232.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M228,179.5 C245.0,179.5 245.0,331.5 262,331.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M228,263.0 C245.0,263.0 245.0,240.5 262,240.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M472,81.0 C489.0,81.0 489.0,288 501.0,288 L721.0,288 C733.0,288 733.0,88.5 750,88.5" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M472,81.0 C489.0,81.0 489.0,288 501.0,288 L721.0,288 C733.0,288 733.0,179.5 750,179.5" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<path d="M472,331.5 C489.0,331.5 489.0,288 501.0,288 L721.0,288 C733.0,288 733.0,263.0 750,263.0" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-backup-a)" opacity="0.9"/>
+<rect x="18" y="56" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">laptops and agent hosts</text>
+<text x="28" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">restic, every two hours; 19</text>
+<text x="28" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">repositories</text>
+<rect x="18" y="147" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="166" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">unraid1 pools</text>
+<text x="28" y="183" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">one ZFS snapshot per pool,</text>
+<text x="28" y="198" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">02:50, mounted read-only</text>
+<rect x="18" y="238" width="210" height="50" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="257" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">hypervisor guests</text>
+<text x="28" y="274" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">disk-level, nightly 04:45</text>
+<rect x="18" y="314" width="210" height="50" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="333" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">CephFS</text>
+<text x="28" y="350" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the model archive, via a guest</text>
+<rect x="262" y="56" width="210" height="50" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">restic server on unraid1</text>
+<text x="272" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">append-only</text>
+<rect x="262" y="132" width="210" height="50" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="151" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">bucket on Ceph</text>
+<text x="272" y="168" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">nearly all of unraid1, 04:00</text>
+<rect x="262" y="208" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="227" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">backup server</text>
+<text x="272" y="244" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">guest archives; a job that pages</text>
+<text x="272" y="259" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">if it disappears</text>
+<rect x="262" y="299" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="318" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">nexus</text>
+<text x="272" y="335" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">hourly one-way encrypted ZFS</text>
+<text x="272" y="350" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">receive, 31 datasets</text>
+<rect x="506" y="56" width="210" height="110" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="516" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the offsite bucket</text>
+<text x="516" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the small irreplaceable tier,</text>
+<text x="516" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">03:00; 30-day hide window; the</text>
+<text x="516" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">writer key is meant to hide,</text>
+<text x="516" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">never delete, a scope still to</text>
+<text x="516" y="152" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">be verified</text>
+<rect x="506" y="192" width="210" height="80" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="516" y="211" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rotating USB pair</text>
+<text x="516" y="228" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the archive and the</text>
+<text x="516" y="243" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">repositories, nightly; one drive</text>
+<text x="516" y="258" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">always away</text>
+<rect x="750" y="56" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="760" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">daily verify sweep</text>
+<text x="760" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">does each repository still</text>
+<text x="760" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">receive snapshots</text>
+<rect x="750" y="147" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="760" y="166" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">weekly restore test</text>
+<text x="760" y="183" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">three repositories restored and</text>
+<text x="760" y="198" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">compared, on a third box</text>
+<rect x="750" y="238" width="210" height="50" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="760" y="257" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">replica check</text>
+<text x="760" y="274" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">is nexus still receiving</text>
+<line x1="18" y1="398" x2="962" y2="398" stroke="#2A2A2A"/>
+<text x="18" y="416" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">The invariant: a destination never holds a backup that originated from itself. Ceph&#x27;s landing zone on unraid1 is excluded from the plan that backs</text>
+<text x="18" y="431" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">unraid1 up into Ceph; the Ceph identity bundle goes off site and never back into Ceph.</text>
+<text x="18" y="461" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">Dashed arrows are checks, not copies. None of the three trusts the others.</text>
+<text x="962" y="491" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/backup.yaml.</text>
+</svg>

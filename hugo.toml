@@ -1,0 +1,13 @@
+# Not a standalone site. oznog-com mounts this repository's content/ and
+# static/ into its own build (see the plan: node0-public-site-plan-20260920.md
+# in the private repository). This file exists so `hugo` can at least parse
+# the tree for a local check: hugo --source . --renderToMemory
+baseURL = "https://oznog.com/"
+title = "node0"
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
