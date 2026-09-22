@@ -71,7 +71,12 @@ records rather than memories.
 | rack3 | 42U | compute, inference, dev: di1 to di5, the agents, util1/util2, the sandboxes | bonded 20260912 |
 
 Rack fill by occupied U, from the same export: rack1 93%, rack2 100%, rack3
-98%. Racks 2 and 3 are, in the plain sense, full. Rack0 has no fill figure,
+98%. Rack 2 is full in the plain sense. Rack 3's figure is the inventory's,
+not the room's: its shelves count as occupied units, but they were placed to
+hold the compute that is still to come, behind the GPU hosts and on the shelf
+at U31, which is why transfer-switch ports there sit free. By Christoph's
+estimate rack 3 is about two-thirds full in the sense that matters. An
+inventory models a shelf as a device, not as room. Rack0 has no fill figure,
 because its devices sit on one labelled shelf with no individual rack positions
 in the record.
 
@@ -102,9 +107,11 @@ page uses the export.
 
 ### What takes the site down
 
-Three things take the whole site down: loss of the building, the basement's
-environment starting with water at the portable air conditioner's drain, and
-the electrical panel and the circuits feeding the racks.
+Two things take the whole site down: loss of the building, and the electrical
+panel and the circuits feeding the racks. Water is watched but is not on that
+list: the portable air conditioner's drain has a sensor on it for early
+notice, and there is far more floor than water, so a leak there is a cleanup,
+not an outage.
 
 A rack that holds almost no compute can still be the fleet's single point of
 failure, because orderly shutdown depends on power.

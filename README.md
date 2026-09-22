@@ -51,4 +51,11 @@ Writing, diagrams, photographs and data (`content/`, `static/`, `data/`): CC BY 
 
 ## Status
 
-Publication candidate, 20260922: every page derived, voice-passed and gate-checked, under Christoph's read before the first public push.
+Published 20260922, as the first drop. What is here first, on purpose, is the
+architecture, the design decisions with their trade-offs, the lessons and the
+rules the fleet runs by, because those are what we believe transfer, and because
+many of the lessons and rules were distilled from the runbooks in the first place.
+As the site matures and each piece proves itself, the other artefacts a builder
+would want follow the same route out: runbooks, configuration, the monitoring and
+management scripts, the agents' skills, each sanitised for privacy and security
+before it leaves.
