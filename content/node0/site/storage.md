@@ -93,9 +93,9 @@ partly built, the orchestrator refuses to run.
 Two runs read from that view. One writes the small irreplaceable tier to the
 offsite bucket at 03:00. One writes nearly all of unraid1 into a bucket on the
 site's own object storage at 04:00, which is a second local copy in a different
-failure domain. A third run, on its own timer, writes to whichever offsite USB
-drive is attached; whether it reads the frozen view or the live pools is a
-question the next capture settles, and the private runbook carries its time. Two flows run on their own clocks: unraid1 sends hourly encrypted
+failure domain. A third flow does not need that view at all: at 02:00 syncoid sends
+ZFS snapshots to whichever offsite USB drive is attached, mirroring the
+source's own snapshot set, and a ZFS snapshot is consistent by construction. Two flows run on their own clocks: unraid1 sends hourly encrypted
 snapshots to nexus, and a guest backs CephFS up into the restic server, so the
 12 TiB archive of model weights has a copy outside Ceph.
 
