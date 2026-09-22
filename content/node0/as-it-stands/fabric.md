@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/fabric/"]
 title: "Fabric"
 layout: "n0-layer"
 layer: 3

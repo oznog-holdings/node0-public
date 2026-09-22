@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/"]
 title: "Node0, as it stands"
 description: "Inside a self-hosted infrastructure site: two rooms, four racks, 71 hosts, a storage cluster, a hypervisor cluster, GPU hosts behind one model gateway, and the agents that help run it. Its architecture, its decisions, what broke, and what it can carry, captured on 20260920 and re-measured on 20260921."
 layout: "n0-page"
@@ -93,7 +94,7 @@ One gateway address, and behind it every model the site can serve, with hosted m
 
 **What it enables.** An agent chooses local or hosted per task by policy, not habit. A key can be limited to local backends, so a workflow that must not leave the site is held by the gateway rather than by good intentions. The bill is one number a day. A new model is a registry entry, not a project.
 
-The [compute page](/node0/site/compute/) carries the client profiles, the placement rules, the model archive, and the traps (a gateway that is up and a backend that is not look identical from outside).
+The [compute page](/node0/as-it-stands/compute/) carries the client profiles, the placement rules, the model archive, and the traps (a gateway that is up and a backend that is not look identical from outside).
 
 ## What is shared, and why
 
@@ -147,28 +148,28 @@ The technologies, named and linked, and the reason each one is here. We chose op
 
 Two services outside the building carry the parts of the design that must not be inside it, both chosen for their reputation, their reliability and their values, which line up with ours, and both named here with thanks. **[Backblaze B2](https://www.backblaze.com/cloud-storage)** holds the offsite bucket: the small irreplaceable tier, written nightly under a rule that hides rather than deletes, so a stolen writer key cannot take the history with it. **[Hetzner](https://www.hetzner.com/)** rents the one machine off the property, the outside-in vantage point that scans the site's public surface with no credential to it, in a datacentre in Germany.
 
-The choices that belong to one service rather than to the site, the document, photo, media, finance, automation and home stacks, are listed the same way, with links and reasons, on the [services page](/node0/site/services/#why-we-chose-it).
+The choices that belong to one service rather than to the site, the document, photo, media, finance, automation and home stacks, are listed the same way, with links and reasons, on the [services page](/node0/as-it-stands/services/#why-we-chose-it).
 
 ### The decision ledger
 
 | date | decision | long form |
 |---|---|---|
-| 20260815 | The first NixOS host, to prove an agent can operate NixOS without imperative drift. Every new x86 box after it is NixOS. | [operations](/node0/site/operations/) |
-| 20260816 | Ceph proven in a lab (failure domains, disk replacement, total power loss, upgrade) before any production disk. | [storage](/node0/site/storage/) |
-| 20260816 | CI/CD: a runner validates every push, hosts converge to a deploy branch, promotion is one push. | [operations](/node0/site/operations/) |
-| 20260817 | Fabric: management on its own VLAN; switch pairs in-rack, not across racks; every host bonds to a pair. | [fabric](/node0/site/fabric/) |
-| 20260817 | DNS moves from a simple resolver to an authoritative server with three members, the second on a small always-on box the same day. | [bootstrap](/node0/site/bootstrap/) |
-| 20260820 | The provider rebuilds the circuit as a transparent LAN service; firewall failover over the WAN becomes the production design. | [edge](/node0/site/edge/) |
-| 20260821 | Everything moves off the first hub to a new one; the first takes a lighter second role and leaves the site in 2027. | [storage](/node0/site/storage/) |
-| 20260824 | PDU and ATS management stays on an isolated VLAN with per-card rules; the boundary is the VLAN, not the transport. | [power](/node0/site/power/) |
-| 20260901 | The hypervisor cluster uses Ceph as an external client, not hyperconverged. | [compute](/node0/site/compute/) |
-| 20260903 | Label everything, front and back, both ends of every cable, before a box goes in a rack. | [site](/node0/site/site/) |
-| 20260904 | UPS low-battery raised to fifteen minutes and made the sole shutdown trigger; storage and hypervisors shut down and return as one unit. | [power](/node0/site/power/) |
-| 20260905 | If rotating a credential requires editing the repository, the design is wrong. Enforced in CI. | [operations](/node0/site/operations/) |
-| 20260905 | A destination never holds a backup that originated from itself. Enforced in code. | [storage](/node0/site/storage/) |
-| 20260906 | Notifications leave through a box that is not the one being watched, on their own public address, with per-host write-only tokens. | [observability](/node0/site/observability/) |
-| 20260906 | The inventory system goes live as the fleet's single source of truth: every device, cable, address and VLAN, with monitoring targets discovered from it. At this scale it stopped being optional. | [site](/node0/site/site/) |
-| 20260909 | Rack 2 accepted at 103% of one UPS on failover, by decision, with the arithmetic recorded. | [power](/node0/site/power/) |
+| 20260815 | The first NixOS host, to prove an agent can operate NixOS without imperative drift. Every new x86 box after it is NixOS. | [operations](/node0/as-it-stands/operations/) |
+| 20260816 | Ceph proven in a lab (failure domains, disk replacement, total power loss, upgrade) before any production disk. | [storage](/node0/as-it-stands/storage/) |
+| 20260816 | CI/CD: a runner validates every push, hosts converge to a deploy branch, promotion is one push. | [operations](/node0/as-it-stands/operations/) |
+| 20260817 | Fabric: management on its own VLAN; switch pairs in-rack, not across racks; every host bonds to a pair. | [fabric](/node0/as-it-stands/fabric/) |
+| 20260817 | DNS moves from a simple resolver to an authoritative server with three members, the second on a small always-on box the same day. | [bootstrap](/node0/as-it-stands/bootstrap/) |
+| 20260820 | The provider rebuilds the circuit as a transparent LAN service; firewall failover over the WAN becomes the production design. | [edge](/node0/as-it-stands/edge/) |
+| 20260821 | Everything moves off the first hub to a new one; the first takes a lighter second role and leaves the site in 2027. | [storage](/node0/as-it-stands/storage/) |
+| 20260824 | PDU and ATS management stays on an isolated VLAN with per-card rules; the boundary is the VLAN, not the transport. | [power](/node0/as-it-stands/power/) |
+| 20260901 | The hypervisor cluster uses Ceph as an external client, not hyperconverged. | [compute](/node0/as-it-stands/compute/) |
+| 20260903 | Label everything, front and back, both ends of every cable, before a box goes in a rack. | [site](/node0/as-it-stands/site/) |
+| 20260904 | UPS low-battery raised to fifteen minutes and made the sole shutdown trigger; storage and hypervisors shut down and return as one unit. | [power](/node0/as-it-stands/power/) |
+| 20260905 | If rotating a credential requires editing the repository, the design is wrong. Enforced in CI. | [operations](/node0/as-it-stands/operations/) |
+| 20260905 | A destination never holds a backup that originated from itself. Enforced in code. | [storage](/node0/as-it-stands/storage/) |
+| 20260906 | Notifications leave through a box that is not the one being watched, on their own public address, with per-host write-only tokens. | [observability](/node0/as-it-stands/observability/) |
+| 20260906 | The inventory system goes live as the fleet's single source of truth: every device, cable, address and VLAN, with monitoring targets discovered from it. At this scale it stopped being optional. | [site](/node0/as-it-stands/site/) |
+| 20260909 | Rack 2 accepted at 103% of one UPS on failover, by decision, with the arithmetic recorded. | [power](/node0/as-it-stands/power/) |
 
 ## State at capture: running, and unresolved
 

@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/bootstrap/"]
 title: "Bootstrap"
 layout: "n0-layer"
 layer: 4

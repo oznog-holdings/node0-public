@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/compute/"]
 title: "Compute"
 layout: "n0-layer"
 layer: 6

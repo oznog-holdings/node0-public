@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/services/"]
 title: "Services"
 layout: "n0-layer"
 layer: 7
@@ -102,7 +103,7 @@ their common failure domain.
 
 ## Why we chose it
 
-The same form as the site-wide list on the [as-it-stands page](/node0/site/#why-we-chose-it): each project named and linked, and the reason it is here. Open source wherever it could carry the job, for the same reason as everywhere else on the site, and the two paid services below are the exceptions, named with why. We are grateful to every one of these projects and services; please support them if you are able to.
+The same form as the site-wide list on the [as-it-stands page](/node0/as-it-stands/#why-we-chose-it): each project named and linked, and the reason it is here. Open source wherever it could carry the job, for the same reason as everywhere else on the site, and the two paid services below are the exceptions, named with why. We are grateful to every one of these projects and services; please support them if you are able to.
 
 **[Paperless-ngx](https://docs.paperless-ngx.com/)**, with **[Stirling PDF](https://www.stirlingpdf.com/)** in front of it. Every paper that arrives, scanned, text-extracted, tagged and searchable, and the agents answer questions against it. Stirling splits and decrypts before ingest, so nothing is handed to the archive that it cannot read.
 

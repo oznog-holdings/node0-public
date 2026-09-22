@@ -188,7 +188,7 @@ Three columns. Lean is the cheapest honest version of the rung. Full is what thi
 
 ## Why these choices
 
-Every technology below was chosen on Node0 for a reason that still holds at seed size, and each entry says what would change the choice. [Node0 as it stands](/node0/site/) carries the long form of each decision and what it cost.
+Every technology below was chosen on Node0 for a reason that still holds at seed size, and each entry says what would change the choice. [Node0 as it stands](/node0/as-it-stands/) carries the long form of each decision and what it cost.
 
 **Unraid, for the infra box.** ZFS pools with a UI, containers and VMs on one box, and a control surface a non-operator can work at two in the morning. The classic mixed-drive array is not the reason; ZFS is. It is the one box in the seed that a person runs rather than the repo, and that is the point: it is where the site starts before there is a repo. *What would change it:* you already run TrueNAS or Proxmox well, or every drive is the same size and you want ZFS without a licence. The seed's layout (ZFS pools, no parity array) transfers.
 

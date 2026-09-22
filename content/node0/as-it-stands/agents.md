@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/agents/"]
 title: "Agents and dev"
 layout: "n0-layer"
 layer: 8

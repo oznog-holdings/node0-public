@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/observability/"]
 title: "Observability"
 layout: "n0-layer"
 layer: 9

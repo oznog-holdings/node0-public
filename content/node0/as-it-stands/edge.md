@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/edge/"]
 title: "Edge"
 layout: "n0-layer"
 layer: 2

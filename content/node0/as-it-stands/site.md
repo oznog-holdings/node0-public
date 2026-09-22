@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/site/"]
 title: "Site"
 layout: "n0-layer"
 layer: 1

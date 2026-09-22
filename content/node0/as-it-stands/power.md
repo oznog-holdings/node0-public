@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/power/"]
 title: "Power and environment"
 layout: "n0-layer"
 layer: 10

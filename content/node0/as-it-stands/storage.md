@@ -1,4 +1,5 @@
 ---
+aliases: ["/node0/site/storage/"]
 title: "Storage"
 layout: "n0-layer"
 layer: 5
