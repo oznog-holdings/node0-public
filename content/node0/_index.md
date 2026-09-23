@@ -18,6 +18,12 @@ Node0 is a real place: two rooms, four racks, a fabric of six switches, nine sto
 
 These pages are written to be read by a person and used by their agents. Point an agent at them and tell it what you have on the bench and what you need the site to do. It will find the rung to start on, the decisions that transfer, and the lesson that would otherwise cost you the same time it cost us. Every page names its source and its date, so an agent can tell a rule from an instance.
 
+Point it at these pages, or at [the repository](https://github.com/oznog-holdings/node0-public) that holds them as Markdown and YAML, and give it your situation. A prompt that works:
+
+> Read the seed and its companion design, then the as-it-stands pages for the layers I name. I have [the hardware on my bench], I need the site to [the workloads], and my limits are [budget, power, space]. Ask me what is missing, recommend the rung to start on, and cite the page or lesson behind each choice. Keep separate what Node0 actually ran, what the seed proposes, and what you infer.
+
+The seed's own status table says which rungs have actually been run; have the agent check it before treating a design as demonstrated practice.
+
 It is not a datacenter and does not pretend to be one. It runs on one fibre line and battery, not two providers and a generator. What it has instead is the discipline of one. The inventory is the source of truth. Every alert names its runbook. Backups are proven by restoring them. A dated capture of the whole site is what these pages are derived from.
 
 ## Three doors
