@@ -39,7 +39,7 @@ Twenty-eight fleet rules came out of the collection and were written into the op
 2. **Identify a drive, board or card by its own serial, never by slot, bay or letter.** Letters shuffle on a reboot; slots get reseated; the serial is the thing.
 3. **Clean the bay before condemning the drive.** One contaminated connector wears two disguises; a soak test on a known-good spare tells them apart.
 4. **Build and confirm the producer before the rule.** An alert written ahead of the thing it watches pages a human about your own unfinished work, and creating an inventory record for a host starts paging about it before it is built.
-5. **Bound every wait loop, or make it die with its own session.** An abandoned loop locked the only dashboard account out for a day by re-arming its own lockout.
+5. **Bound every wait loop, or make it die with its own session.** An abandoned loop locked a dashboard account out for a day by re-arming its own lockout.
 6. **Never delete in the same command as the copy it depends on.** Copy, verify, delete, as three observed steps. No exemption for small.
 
 [All twenty-eight](/node0/lessons/rules/), with the lesson each one came from.
