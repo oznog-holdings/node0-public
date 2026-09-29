@@ -26,5 +26,5 @@ The monitoring as it stands now is on the [observability](/node0/as-it-stands/ob
 - The habit of reading fire-and-resolve notification pairs together as a single incident (20260912): a change in how someone reads a channel, not a change to a system, tool or runbook. Folded into the dead-man's-switch lesson as context.
 - A dashboard-embedding quirk in the storage cluster's Grafana folder (20260911): a one-time documentation note about an exception to a convention, with no incident and no cost attached.
 - Two permanently unreachable scrape targets removed from monitoring (20260910): a clean, uneventful correction with no cost and no near-miss.
-- Windows event logs not yet flowing into the log aggregation system (open as of 20260920): a known gap, not yet a dated event with a cost and a fix.
+- Windows event logs reaching the log aggregation system: listed as open at the capture of 20260920, and flowing when checked on 20260929, with events from the Windows server in the preceding hour. Declined because it never became a dated event with a cost and a fix.
 - The Ceph maintenance-mode procedure lapsing a second time, on a different host, after having been fixed once: an adherence lapse rather than a defect in the monitoring system. The check that catches it is procedural discipline, not a new alert.
