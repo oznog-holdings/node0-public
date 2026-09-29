@@ -1,0 +1,27 @@
+title: "The model path"
+desc: "A consumer asks the gateway by role alias with its own key; the key's tag decides whether the request may leave the site. Local backends serve most of it; an external deployment answers only for a key that carries the tag."
+kind: flow
+columns:
+  - name: "consumer"
+    nodes:
+      - {id: agent, label: "an agent, script or service", sub: "asks for a role: chat, code, embed, ocr, probe..."}
+      - {id: key, label: "its own key", sub: "tag: local-only, or external allowed"}
+  - name: "one address"
+    nodes:
+      - {id: gw, label: "llm-gw1: LiteLLM", sub: "one address for the fleet; spend and latency metered per key; fails over between backends"}
+  - name: "local backends"
+    nodes:
+      - {id: di, label: "di1 to di5", sub: "llama-swap loads models on demand; 7 GPUs, 136 GiB VRAM"}
+      - {id: lap, label: "two serving laptops", sub: "the largest model, from 128 GiB of unified memory"}
+  - name: "external"
+    nodes:
+      - {id: ext, label: "external deployments", sub: "subscription-backed; only for a tagged key; a tripwire inspects outbound traffic"}
+edges:
+  - {from: agent, to: gw}
+  - {from: key, to: gw, style: dashed}
+  - {from: gw, to: di}
+  - {from: gw, to: lap}
+  - {from: gw, to: ext, label: "tagged key only", style: gated}
+notes:
+  - "A key without the tag cannot reach an external deployment at all. The gate is proven daily by attempting the forbidden call and confirming the refusal."
+  - "A new model is a registry entry behind the gateway, not a project. A new compute box is one more backend."

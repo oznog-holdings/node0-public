@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 513" width="100%" role="img" aria-labelledby="flow-power-t flow-power-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="flow-power-t">Power: one panel, seven UPS units, nine transfer switches</title><desc id="flow-power-d">Six 240 V feeds leave one panel; four UPS units in rack 1 feed racks 2 and 3 as A and B sides through metered strips and transfer switches; three small UPS units carry the network room. Figures are UPS output on 20260921.</desc>
+<defs><marker id="flow-power-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="flow-power-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="980" height="513" fill="#0D0D0D"/>
+<text x="18" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">the panel</text>
+<line x1="18" y1="40" x2="155" y2="40" stroke="#2A2A2A"/>
+<text x="219" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rack 1: the UPS units</text>
+<line x1="219" y1="40" x2="356" y2="40" stroke="#2A2A2A"/>
+<text x="420" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">metered strips</text>
+<line x1="420" y1="40" x2="557" y2="40" stroke="#2A2A2A"/>
+<text x="621" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">transfer switches</text>
+<line x1="621" y1="40" x2="758" y2="40" stroke="#2A2A2A"/>
+<text x="822" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">the hosts</text>
+<line x1="822" y1="40" x2="959" y2="40" stroke="#2A2A2A"/>
+<path d="M155,96.0 C187.0,96.0 187.0,103.5 219,103.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M155,96.0 C187.0,96.0 187.0,209.5 219,209.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M155,96.0 C187.0,96.0 187.0,316.5 219,316.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M356,103.5 C388.0,103.5 388.0,97.0 420,97.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M356,209.5 C388.0,209.5 388.0,197.5 420,197.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M557,97.0 C589.0,97.0 589.0,103.5 621,103.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M758,103.5 C790.0,103.5 790.0,111.0 822,111.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M557,197.5 C589.0,197.5 589.0,209.5 621,209.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<path d="M758,209.5 C790.0,209.5 790.0,232.0 822,232.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-power-a)" opacity="0.9"/>
+<rect x="18" y="56" width="137" height="80" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">one basement panel</text>
+<text x="28" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">six 240 V feeds, four</text>
+<text x="28" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">120 V feeds, each its</text>
+<text x="28" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">own breaker</text>
+<rect x="219" y="56" width="137" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="229" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">ups1 and ups2</text>
+<text x="229" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">4,800 W each at 240</text>
+<text x="229" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">V; two battery packs</text>
+<text x="229" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">each; 2,397 W and</text>
+<text x="229" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">2,531 W out</text>
+<rect x="219" y="177" width="137" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="229" y="196" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">ups3 and ups4</text>
+<text x="229" y="213" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">4,800 W each; 581 W</text>
+<text x="229" y="228" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">and 886 W out</text>
+<rect x="219" y="268" width="137" height="97" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="229" y="287" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">three small UPS</text>
+<text x="229" y="304" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">units</text>
+<text x="229" y="321" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the two firewalls and</text>
+<text x="229" y="336" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the replica, in the</text>
+<text x="229" y="351" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">network room</text>
+<rect x="420" y="56" width="137" height="82" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="430" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack 2: A and B</text>
+<text x="430" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">strips</text>
+<text x="430" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">infeed metered; 2,632</text>
+<text x="430" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">W and 2,541 W</text>
+<rect x="420" y="164" width="137" height="67" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="430" y="183" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack 3: A and B</text>
+<text x="430" y="200" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">strips</text>
+<text x="430" y="217" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">988 W and 823 W</text>
+<rect x="621" y="56" width="137" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="631" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">ats1, ats2</text>
+<text x="631" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">rack 2: the single-</text>
+<text x="631" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">supply hosts; dual-</text>
+<text x="631" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">supply hosts take A</text>
+<text x="631" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">and B directly</text>
+<rect x="621" y="177" width="137" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="631" y="196" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">ats3 to ats9</text>
+<text x="631" y="213" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">rack 3: one per GPU</text>
+<text x="631" y="228" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">host and utility host</text>
+<rect x="822" y="56" width="137" height="110" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="832" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack 2</text>
+<text x="832" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">4,928 W across the</text>
+<text x="832" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">pair: 103% of one</text>
+<text x="832" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">unit on failover,</text>
+<text x="832" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">accepted by decision</text>
+<text x="832" y="152" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">20260909</text>
+<rect x="822" y="192" width="137" height="80" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="832" y="211" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rack 3</text>
+<text x="832" y="228" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">1,467 W across the</text>
+<text x="832" y="243" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">pair; headroom held</text>
+<text x="832" y="258" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">for more GPUs</text>
+<rect x="362.3" y="85.25" width="51.4" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="388.0" y="96.25" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">A and B</text>
+<rect x="362.3" y="188.5" width="51.4" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="388.0" y="199.5" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">A and B</text>
+<line x1="18" y1="399" x2="962" y2="399" stroke="#2A2A2A"/>
+<text x="18" y="417" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">The shutdown design: fifteen minutes of low battery is the sole trigger; storage and hypervisors go down and come back as one unit; core survives a</text>
+<text x="18" y="432" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">power event because it must be the box that handles it.</text>
+<text x="18" y="462" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">The two meters disagree by design: strips read infeed, UPS units read output. The site quotes UPS output. The power-outage rehearsal, tested by causing</text>
+<text x="18" y="477" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">the condition, is still pending.</text>
+<text x="962" y="507" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/power.yaml.</text>
+</svg>

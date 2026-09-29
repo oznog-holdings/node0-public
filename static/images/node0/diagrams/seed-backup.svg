@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 451" width="100%" role="img" aria-labelledby="flow-seed-backup-t flow-seed-backup-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="flow-seed-backup-t">The Seed&#x27;s backups</title><desc id="flow-seed-backup-d">Two flows that stay apart: the infra box&#x27;s own data straight to the offsite bucket, and the laptops and agent box to an append-only server that is mirrored off site. The dashed arrows are the checks that prove both.</desc>
+<defs><marker id="flow-seed-backup-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="flow-seed-backup-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="980" height="451" fill="#0D0D0D"/>
+<text x="18" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">sources</text>
+<line x1="18" y1="40" x2="228" y2="40" stroke="#2A2A2A"/>
+<text x="262" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">on site</text>
+<line x1="262" y1="40" x2="472" y2="40" stroke="#2A2A2A"/>
+<text x="506" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">off site</text>
+<line x1="506" y1="40" x2="716" y2="40" stroke="#2A2A2A"/>
+<text x="750" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">proof</text>
+<line x1="750" y1="40" x2="960" y2="40" stroke="#2A2A2A"/>
+<path d="M228,211.5 C245.0,211.5 245.0,227.5 262,227.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-backup-a)" opacity="0.9"/>
+<path d="M472,227.5 C489.0,227.5 489.0,209.5 506,209.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-backup-a)" opacity="0.9"/>
+<path d="M228,97.0 C245.0,97.0 245.0,104.5 262,104.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-backup-a)" opacity="0.9"/>
+<path d="M472,104.5 C489.0,104.5 489.0,103.5 506,103.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-backup-a)" opacity="0.9"/>
+<path d="M716,209.5 C733.0,209.5 733.0,285.5 750,285.5" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-seed-backup-a)" opacity="0.9"/>
+<rect x="18" y="56" width="210" height="82" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">laptops and the agent</text>
+<text x="28" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">box</text>
+<text x="28" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">plain restic every two hours,</text>
+<text x="28" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">host name pinned</text>
+<rect x="18" y="164" width="210" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="183" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the infra box&#x27;s own data</text>
+<text x="28" y="200" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">each app&#x27;s dump made just</text>
+<text x="28" y="215" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">before, app data, the flash,</text>
+<text x="28" y="230" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">host identities, documents,</text>
+<text x="28" y="245" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">finance, photos</text>
+<rect x="262" y="56" width="210" height="97" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rest-server on the infra</text>
+<text x="272" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">box</text>
+<text x="272" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">append-only, one repository</text>
+<text x="272" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">per machine; forget and prune</text>
+<text x="272" y="139" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">run nightly on the server</text>
+<rect x="262" y="179" width="210" height="97" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="198" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">Backrest on the infra</text>
+<text x="272" y="215" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">box</text>
+<text x="272" y="232" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">restic nightly, after a start</text>
+<text x="272" y="247" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">hook checks the dumps are</text>
+<text x="272" y="262" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">fresh and no source is empty</text>
+<rect x="506" y="56" width="210" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="516" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">a second bucket</text>
+<text x="516" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">an rclone mirror of the</text>
+<text x="516" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">rest-server, from a ZFS</text>
+<text x="516" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">snapshot; its own no-delete</text>
+<text x="516" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">key</text>
+<rect x="506" y="177" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="516" y="196" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the site bucket</text>
+<text x="516" y="213" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">a key with no delete; 30-day</text>
+<text x="516" y="228" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">hidden-version window</text>
+<rect x="750" y="56" width="210" height="80" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="760" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">weekly verify sweep</text>
+<text x="760" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">freshness, then one</text>
+<text x="760" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">twenty-sixth of the data read</text>
+<text x="760" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">back</text>
+<rect x="750" y="162" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="760" y="181" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">weekly restore test</text>
+<text x="760" y="198" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">up to three files per</text>
+<text x="760" y="213" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">repository, compared by hash</text>
+<rect x="750" y="253" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="760" y="272" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the core box&#x27;s restore</text>
+<text x="760" y="289" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">from rung 3, weekly from the</text>
+<text x="760" y="304" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">bucket with a read-only key</text>
+<line x1="18" y1="352" x2="962" y2="352" stroke="#2A2A2A"/>
+<text x="18" y="370" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">A destination never holds a backup that originated from itself: the rest-server leaves the site as a mirror, never as a backup of backups.</text>
+<text x="18" y="400" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">The weekly sweep and restore test run against every repository. The dashed arrow is a check, not a copy: the core box reads the bucket with a key that</text>
+<text x="18" y="415" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">cannot write.</text>
+<text x="962" y="445" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/seed-backup.yaml.</text>
+</svg>

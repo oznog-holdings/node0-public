@@ -1,0 +1,6 @@
+This repository carries two licences, by directory. Copyright (c) 2026 Oznog Holdings LLC.
+
+  content/, static/, data/   CC BY 4.0        see LICENSE-content
+  tools/, tests/             MIT              see LICENSE-tools
+
+Both are attribution licences: use it, change it, say where it came from.

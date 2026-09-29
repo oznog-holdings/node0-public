@@ -1,0 +1,57 @@
+# node0-public: a second check, not the gate.
+#
+# The gate is the local run with the private names and rules files, before the
+# push (README). This job re-runs the pattern half and the tool tests at the
+# pushed commit. It cannot see the private files, it scans the tree at one
+# commit and not the history, and by the time it runs the push has already
+# landed on the forge, so a red run is a signal to rewrite, not a barrier.
+#
+# Push events only: the job runs code from the pushed commit with the runner's
+# job token in its environment, which is fine for our own pushes and not for
+# anyone else's.
+#
+# Same runner shape as node0's validate.yml: nixos-x86_64, explicit clone,
+# no interactive credential prompt (a silent hang otherwise).
+
+name: sanitize
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  gate:
+    runs-on: nixos-x86_64
+    timeout-minutes: 10
+    env:
+      GIT_TERMINAL_PROMPT: "0"
+      GIT_ASKPASS: /bin/true
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out
+        run: |
+          set -euo pipefail
+          # The forge's own address comes from the runner, never from this file:
+          # this repository is public and names no internal host.
+          git clone --depth 1 --no-checkout \
+            "https://token:${GITHUB_TOKEN}@${GITHUB_SERVER_URL#https://}/${GITHUB_REPOSITORY}.git" \
+            repo
+          cd repo
+          # The commit that raised the event, never the default branch's tip: a red push
+          # must be red for the push, and a pull request must be checked as proposed.
+          git fetch --depth 1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+          echo "checked out $(git rev-parse --short HEAD) for ${GITHUB_SHA}"
+
+      - name: Tool tests
+        run: |
+          set -euo pipefail
+          cd repo
+          # Never pipe through tail: the failure prints before the summary.
+          python3 -B -m unittest discover -s tests 2>&1
+
+      - name: Sanitize check (pattern half)
+        run: |
+          set -euo pipefail
+          cd repo
+          python3 -B tools/sanitize-check.py --root "$PWD"

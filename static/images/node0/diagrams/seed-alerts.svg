@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 421" width="100%" role="img" aria-labelledby="flow-seed-alerts-t flow-seed-alerts-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="flow-seed-alerts-t">The Seed&#x27;s alert path</title><desc id="flow-seed-alerts-d">What is watched, where the rules run, which way each alert leaves the site, and the dead-man that notices when the whole site goes quiet.</desc>
+<defs><marker id="flow-seed-alerts-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="flow-seed-alerts-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="980" height="421" fill="#0D0D0D"/>
+<text x="18" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">watched</text>
+<line x1="18" y1="40" x2="228" y2="40" stroke="#2A2A2A"/>
+<text x="262" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">where the rules run</text>
+<line x1="262" y1="40" x2="472" y2="40" stroke="#2A2A2A"/>
+<text x="506" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">how it leaves</text>
+<line x1="506" y1="40" x2="716" y2="40" stroke="#2A2A2A"/>
+<text x="750" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">who hears it</text>
+<line x1="750" y1="40" x2="960" y2="40" stroke="#2A2A2A"/>
+<path d="M228,180.5 C245.0,180.5 245.0,228.5 262,228.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M228,81.0 C245.0,81.0 245.0,104.5 262,104.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M472,228.5 C489.0,228.5 489.0,88.5 506,88.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M472,228.5 C489.0,228.5 489.0,179.5 506,179.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M472,228.5 C489.0,228.5 489.0,270.5 506,270.5" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M472,104.5 C489.0,104.5 489.0,88.5 506,88.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M716,88.5 C733.0,88.5 733.0,88.5 750,88.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M716,179.5 C733.0,179.5 733.0,88.5 750,88.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<path d="M716,270.5 C733.0,270.5 733.0,88.5 750,88.5" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-seed-alerts-a)" opacity="0.9"/>
+<rect x="18" y="56" width="210" height="50" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the infra box itself</text>
+<text x="28" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">probed from another box</text>
+<rect x="18" y="132" width="210" height="97" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="151" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the site&#x27;s boxes and</text>
+<text x="28" y="168" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">jobs</text>
+<text x="28" y="185" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">backup ages, restore tests,</text>
+<text x="28" y="200" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">scrubs, drive error growth,</text>
+<text x="28" y="215" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">disk free, UPS state</text>
+<rect x="262" y="56" width="210" height="97" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the watcher on the agent</text>
+<text x="272" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">box</text>
+<text x="272" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">one scheduled script; says</text>
+<text x="272" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">whether the services or the</text>
+<text x="272" y="139" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">whole box are down</text>
+<rect x="262" y="179" width="210" height="99" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="272" y="198" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">Prometheus and</text>
+<text x="272" y="215" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">Alertmanager on the</text>
+<text x="272" y="232" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">infra box</text>
+<text x="272" y="249" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">age and growth rules, each</text>
+<text x="272" y="264" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">with a unit test</text>
+<rect x="506" y="56" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="516" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">ntfy on the core box</text>
+<text x="516" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">from rung 3; a hosted topic</text>
+<text x="516" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">before then</text>
+<rect x="506" y="147" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="516" y="166" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">a hosted topic</text>
+<text x="516" y="183" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">alerts about the core box and</text>
+<text x="516" y="198" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">failed delivery</text>
+<rect x="506" y="238" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="516" y="257" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">Healthchecks.io</text>
+<text x="516" y="274" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">emails when the minute pings</text>
+<text x="516" y="289" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">stop</text>
+<rect x="750" y="56" width="210" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="760" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">your phone</text>
+<text x="760" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">ntfy alerts, and the</text>
+<text x="760" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">dead-man&#x27;s email</text>
+<line x1="18" y1="337" x2="962" y2="337" stroke="#2A2A2A"/>
+<text x="18" y="355" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">An alert about a box never travels through that box: the core box carries the infra box&#x27;s alerts, and a hosted topic carries the core box&#x27;s.</text>
+<text x="18" y="385" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">The dashed line is a heartbeat that always fires. When it stops arriving, the silence is the alarm.</text>
+<text x="962" y="415" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/seed-alerts.yaml.</text>
+</svg>

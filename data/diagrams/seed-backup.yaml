@@ -1,0 +1,30 @@
+title: "The Seed's backups"
+desc: "Two flows that stay apart: the infra box's own data straight to the offsite bucket, and the laptops and agent box to an append-only server that is mirrored off site. The dashed arrows are the checks that prove both."
+kind: flow
+columns:
+  - name: "sources"
+    nodes:
+      - {id: clients, label: "laptops and the agent box", sub: "plain restic every two hours, host name pinned"}
+      - {id: infra, label: "the infra box's own data", sub: "each app's dump made just before, app data, the flash, host identities, documents, finance, photos"}
+  - name: "on site"
+    nodes:
+      - {id: rest, label: "rest-server on the infra box", sub: "append-only, one repository per machine; forget and prune run nightly on the server"}
+      - {id: backrest, label: "Backrest on the infra box", sub: "restic nightly, after a start hook checks the dumps are fresh and no source is empty"}
+  - name: "off site"
+    nodes:
+      - {id: b2b, label: "a second bucket", sub: "an rclone mirror of the rest-server, from a ZFS snapshot; its own no-delete key"}
+      - {id: b2a, label: "the site bucket", sub: "a key with no delete; 30-day hidden-version window"}
+  - name: "proof"
+    nodes:
+      - {id: verify, label: "weekly verify sweep", sub: "freshness, then one twenty-sixth of the data read back"}
+      - {id: restore, label: "weekly restore test", sub: "up to three files per repository, compared by hash"}
+      - {id: corer, label: "the core box's restore", sub: "from rung 3, weekly from the bucket with a read-only key"}
+edges:
+  - {from: infra, to: backrest}
+  - {from: backrest, to: b2a}
+  - {from: clients, to: rest}
+  - {from: rest, to: b2b}
+  - {from: b2a, to: corer, style: dashed}
+notes:
+  - "A destination never holds a backup that originated from itself: the rest-server leaves the site as a mirror, never as a backup of backups."
+  - "The weekly sweep and restore test run against every repository. The dashed arrow is a check, not a copy: the core box reads the bucket with a key that cannot write."

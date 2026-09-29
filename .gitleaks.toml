@@ -1,0 +1,10 @@
+# gitleaks configuration for node0-public. The default rules apply; one file is allowlisted.
+# tests/test_sanitize_check.py holds synthetic, base64-encoded credential shapes (a password
+# "hunter22", a token of repeated letters, an example host) so the tests can prove that
+# tools/sanitize-check.py catches each shape. None is a real secret. Added 20260928.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "synthetic credential shapes in the sanitize-check tests"
+paths = ['''^tests/test_sanitize_check\.py$''']

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 514" width="100%" role="img" aria-labelledby="flow-ladder-t flow-ladder-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="flow-ladder-t">The ladder</title><desc id="flow-ladder-d">Seven rungs, 0 to 6. Each is a complete site; the next is taken when the previous one&#x27;s failure has bitten. After rung 3 the ladder branches, and rung 6 follows rung 5.</desc>
+<defs><marker id="flow-ladder-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="flow-ladder-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="980" height="514" fill="#0D0D0D"/>
+<text x="18" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 0</text>
+<line x1="18" y1="40" x2="122" y2="40" stroke="#2A2A2A"/>
+<text x="186" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 1</text>
+<line x1="186" y1="40" x2="290" y2="40" stroke="#2A2A2A"/>
+<text x="354" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 2</text>
+<line x1="354" y1="40" x2="458" y2="40" stroke="#2A2A2A"/>
+<text x="522" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 3</text>
+<line x1="522" y1="40" x2="626" y2="40" stroke="#2A2A2A"/>
+<text x="690" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">branches</text>
+<line x1="690" y1="40" x2="794" y2="40" stroke="#2A2A2A"/>
+<text x="858" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rung 6</text>
+<line x1="858" y1="40" x2="962" y2="40" stroke="#2A2A2A"/>
+<path d="M122,129.0 C154.0,129.0 154.0,150.5 186,150.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M290,150.5 C322.0,150.5 322.0,143.0 354,143.0" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M458,143.0 C490.0,143.0 490.0,103.5 522,103.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M626,103.5 C658.0,103.5 658.0,127.0 690,127.0" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M626,103.5 C658.0,103.5 658.0,295.0 690,295.0" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<path d="M794,295.0 C826.0,295.0 826.0,119.5 858,119.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-ladder-a)" opacity="0.9"/>
+<rect x="18" y="56" width="104" height="146" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the laptop,</text>
+<text x="28" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">with backups</text>
+<text x="28" y="109" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">already</text>
+<text x="28" y="126" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">running</text>
+<text x="28" y="143" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">your files safe</text>
+<text x="28" y="158" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">in the cloud</text>
+<text x="28" y="173" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">from day one;</text>
+<text x="28" y="188" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$0</text>
+<rect x="186" y="56" width="104" height="189" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="196" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the</text>
+<text x="196" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">infrastructure</text>
+<text x="196" y="109" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">box</text>
+<text x="196" y="126" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">one quiet box</text>
+<text x="196" y="141" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">runs your</text>
+<text x="196" y="156" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">files,</text>
+<text x="196" y="171" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">passwords,</text>
+<text x="196" y="186" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">services and an</text>
+<text x="196" y="201" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">assistant;</text>
+<text x="196" y="216" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$1,580 to</text>
+<text x="196" y="231" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$2,580</text>
+<rect x="354" y="56" width="104" height="174" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="364" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the agent</text>
+<text x="364" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">gets its own</text>
+<text x="364" y="109" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">box</text>
+<text x="364" y="126" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the assistant&#x27;s</text>
+<text x="364" y="141" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">box stays up</text>
+<text x="364" y="156" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">when the main</text>
+<text x="364" y="171" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">box is down,</text>
+<text x="364" y="186" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">and repairs</text>
+<text x="364" y="201" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">itself; $240 to</text>
+<text x="364" y="216" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$960</text>
+<rect x="522" y="56" width="104" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="532" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">the core box</text>
+<text x="532" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">names, time and</text>
+<text x="532" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">alerts outlive</text>
+<text x="532" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the main box;</text>
+<text x="532" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$240</text>
+<rect x="690" y="56" width="104" height="142" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="700" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rung 4:</text>
+<text x="700" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">compute</text>
+<text x="700" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">AI models at</text>
+<text x="700" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">home, private</text>
+<text x="700" y="139" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">and with no</text>
+<text x="700" y="154" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">per-use bill;</text>
+<text x="700" y="169" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$1,830 to</text>
+<text x="700" y="184" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$5,000</text>
+<rect x="690" y="224" width="104" height="142" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="700" y="243" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">rung 5: the</text>
+<text x="700" y="260" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">edge</text>
+<text x="700" y="277" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">your own</text>
+<text x="700" y="292" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">network rules,</text>
+<text x="700" y="307" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">and your data</text>
+<text x="700" y="322" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">copied to a</text>
+<text x="700" y="337" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">second site;</text>
+<text x="700" y="352" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$550 to $2,840</text>
+<rect x="858" y="56" width="104" height="127" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="868" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">a dedicated</text>
+<text x="868" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">firewall</text>
+<text x="868" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">a firewall</text>
+<text x="868" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">built for the</text>
+<text x="868" y="139" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">job guards the</text>
+<text x="868" y="154" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">edge; $240 to</text>
+<text x="868" y="169" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">$890</text>
+<rect x="24.000000000000007" y="205" width="88.60000000000001" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="68.30000000000001" y="216" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">laptop closes</text>
+<rect x="192.0" y="248" width="82.4" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="233.2" y="259" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">infra outage</text>
+<rect x="360.0" y="233" width="132.0" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="426.0" y="244" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">names still on infra</text>
+<rect x="696.0" y="369" width="163.0" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="777.5" y="380" font-size="10" fill="#A8A5A0" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">the edge needs a firewall</text>
+<line x1="18" y1="400" x2="962" y2="400" stroke="#2A2A2A"/>
+<text x="18" y="418" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">Rungs 0 to 3 order by failure mode. Rungs 4 and 5 are independent: take the edge before compute, the second site before either, or neither for a long</text>
+<text x="18" y="433" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">time. Rung 6 follows rung 5.</text>
+<text x="18" y="463" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">Through rung 3: $2,060 lean, $3,780 full. Through rung 6: $4,680 lean, $12,510 full. US prices checked 20260920; the agent, core and firewall boxes and</text>
+<text x="18" y="478" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">the router 20260928.</text>
+<text x="962" y="508" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/ladder.yaml.</text>
+</svg>

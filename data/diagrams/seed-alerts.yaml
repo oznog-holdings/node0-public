@@ -1,0 +1,33 @@
+title: "The Seed's alert path"
+desc: "What is watched, where the rules run, which way each alert leaves the site, and the dead-man that notices when the whole site goes quiet."
+kind: flow
+columns:
+  - name: "watched"
+    nodes:
+      - {id: infra, label: "the infra box itself", sub: "probed from another box"}
+      - {id: site, label: "the site's boxes and jobs", sub: "backup ages, restore tests, scrubs, drive error growth, disk free, UPS state"}
+  - name: "where the rules run"
+    nodes:
+      - {id: watcher, label: "the watcher on the agent box", sub: "one scheduled script; says whether the services or the whole box are down"}
+      - {id: prom, label: "Prometheus and Alertmanager on the infra box", sub: "age and growth rules, each with a unit test"}
+  - name: "how it leaves"
+    nodes:
+      - {id: ntfy, label: "ntfy on the core box", sub: "from rung 3; a hosted topic before then"}
+      - {id: hosted, label: "a hosted topic", sub: "alerts about the core box and failed delivery"}
+      - {id: dm, label: "Healthchecks.io", sub: "emails when the minute pings stop"}
+  - name: "who hears it"
+    nodes:
+      - {id: phone, label: "your phone", sub: "ntfy alerts, and the dead-man's email"}
+edges:
+  - {from: site, to: prom}
+  - {from: infra, to: watcher}
+  - {from: prom, to: ntfy}
+  - {from: prom, to: hosted}
+  - {from: prom, to: dm, style: dashed}
+  - {from: watcher, to: ntfy}
+  - {from: ntfy, to: phone}
+  - {from: hosted, to: phone}
+  - {from: dm, to: phone, style: dashed}
+notes:
+  - "An alert about a box never travels through that box: the core box carries the infra box's alerts, and a hosted topic carries the core box's."
+  - "The dashed line is a heartbeat that always fires. When it stops arriving, the silence is the alarm."

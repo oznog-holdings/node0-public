@@ -1,0 +1,28 @@
+title: "The ladder"
+desc: "Seven rungs, 0 to 6. Each is a complete site; the next is taken when the previous one's failure has bitten. After rung 3 the ladder branches, and rung 6 follows rung 5."
+kind: flow
+columns:
+  - name: "rung 0"
+    nodes: [{id: r0, label: "the laptop, with backups already running", sub: "your files safe in the cloud from day one; $0"}]
+  - name: "rung 1"
+    nodes: [{id: r1, label: "the infrastructure box", sub: "one quiet box runs your files, passwords, services and an assistant; $1,580 to $2,580"}]
+  - name: "rung 2"
+    nodes: [{id: r2, label: "the agent gets its own box", sub: "the assistant's box stays up when the main box is down, and repairs itself; $240 to $960"}]
+  - name: "rung 3"
+    nodes: [{id: r3, label: "the core box", sub: "names, time and alerts outlive the main box; $240"}]
+  - name: "branches"
+    nodes:
+      - {id: r4, label: "rung 4: compute", sub: "AI models at home, private and with no per-use bill; $1,830 to $5,000"}
+      - {id: r5, label: "rung 5: the edge", sub: "your own network rules, and your data copied to a second site; $550 to $2,840"}
+  - name: "rung 6"
+    nodes: [{id: r6, label: "a dedicated firewall", sub: "a firewall built for the job guards the edge; $240 to $890"}]
+edges:
+  - {from: r0, to: r1, label: "laptop closes"}
+  - {from: r1, to: r2, label: "infra outage"}
+  - {from: r2, to: r3, label: "names still on infra"}
+  - {from: r3, to: r4, style: dashed}
+  - {from: r3, to: r5, style: dashed}
+  - {from: r5, to: r6, label: "the edge needs a firewall"}
+notes:
+  - "Rungs 0 to 3 order by failure mode. Rungs 4 and 5 are independent: take the edge before compute, the second site before either, or neither for a long time. Rung 6 follows rung 5."
+  - "Through rung 3: $2,060 lean, $3,780 full. Through rung 6: $4,680 lean, $12,510 full. US prices checked 20260920; the agent, core and firewall boxes and the router 20260928."

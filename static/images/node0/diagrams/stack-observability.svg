@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="100%" role="img" aria-labelledby="stack-observability-t stack-observability-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="stack-observability-t">The eleven layers, and what rests on what</title><desc id="stack-observability-d">The eleven layers of Node0 drawn as a stack: site as the frame, power under everything, operations beside everything, and the layers that rest on each other in bands from the edge and fabric up to services, agents and observability.</desc>
+<defs><marker id="stack-observability-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="stack-observability-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="760" height="440" fill="#0D0D0D"/>
+<rect x="18" y="18" width="724" height="342" fill="#181818" stroke="#2A2A2A" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>
+<text x="30" y="38" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">1</text>
+<text x="52" y="39" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Site: two rooms, four racks, the inventory</text>
+<rect x="580" y="52" width="150" height="296" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<text x="592" y="74" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">11</text>
+<text x="614" y="75" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Operations</text>
+<text x="592" y="98" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">deploy branch, CI,</text>
+<text x="592" y="114" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">the inventory</text>
+<text x="592" y="130" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">as authority</text>
+<clipPath id="c73"><rect x="30" y="52" width="166" height="66"/></clipPath>
+<rect x="30" y="52" width="172" height="66" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<g clip-path="url(#c73)">
+<text x="42" y="74" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">7</text>
+<text x="64" y="75" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Services</text>
+<text x="42" y="95" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">what a person touches</text>
+</g>
+<clipPath id="c74"><rect x="212" y="52" width="166" height="66"/></clipPath>
+<rect x="212" y="52" width="172" height="66" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<g clip-path="url(#c74)">
+<text x="224" y="74" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">8</text>
+<text x="246" y="75" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Agents and dev</text>
+<text x="224" y="95" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">who operates it; the</text>
+<text x="224" y="110" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">sandboxes; the rules</text>
+</g>
+<clipPath id="c75"><rect x="394" y="52" width="166" height="66"/></clipPath>
+<rect x="394" y="52" width="172" height="66" fill="rgba(162,47,46,.18)" stroke="#A22F2E" stroke-width="1"/>
+<g clip-path="url(#c75)">
+<text x="406" y="74" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">9</text>
+<text x="428" y="75" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start">Observability</text>
+<text x="406" y="95" font-size="12" fill="#918E88" font-weight="400" text-anchor="start">is it working, right now</text>
+</g>
+<clipPath id="c76"><rect x="30" y="128" width="258" height="66"/></clipPath>
+<rect x="30" y="128" width="264" height="66" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<g clip-path="url(#c76)">
+<text x="42" y="150" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">5</text>
+<text x="64" y="151" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Storage</text>
+<text x="42" y="171" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">hub, replica, cluster, offsite</text>
+</g>
+<clipPath id="c77"><rect x="304" y="128" width="258" height="66"/></clipPath>
+<rect x="304" y="128" width="264" height="66" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<g clip-path="url(#c77)">
+<text x="316" y="150" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">6</text>
+<text x="338" y="151" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Compute</text>
+<text x="316" y="171" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">hypervisors, GPUs, one gateway</text>
+</g>
+<clipPath id="c78"><rect x="30" y="204" width="532" height="66"/></clipPath>
+<rect x="30" y="204" width="538" height="66" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<g clip-path="url(#c78)">
+<text x="42" y="226" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">4</text>
+<text x="64" y="227" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Bootstrap</text>
+<text x="42" y="247" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">names, time, secrets, rebuild</text>
+</g>
+<clipPath id="c79"><rect x="30" y="280" width="258" height="66"/></clipPath>
+<rect x="30" y="280" width="264" height="66" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<g clip-path="url(#c79)">
+<text x="42" y="302" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">2</text>
+<text x="64" y="303" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Edge</text>
+<text x="42" y="323" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">one fibre, a firewall pair</text>
+</g>
+<clipPath id="c80"><rect x="304" y="280" width="258" height="66"/></clipPath>
+<rect x="304" y="280" width="264" height="66" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<g clip-path="url(#c80)">
+<text x="316" y="302" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">3</text>
+<text x="338" y="303" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Fabric</text>
+<text x="316" y="323" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">six switches in three pairs</text>
+</g>
+<line x1="299" y1="120" x2="299" y2="126" stroke="#918E88" stroke-width="1" opacity="0.6"/>
+<line x1="299" y1="196" x2="299" y2="202" stroke="#918E88" stroke-width="1" opacity="0.6"/>
+<line x1="299" y1="272" x2="299" y2="278" stroke="#918E88" stroke-width="1" opacity="0.6"/>
+<rect x="18" y="370" width="724" height="52" fill="#181818" stroke="#2A2A2A" stroke-width="1" opacity="0.45"/>
+<text x="30" y="392" font-size="12" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" opacity="0.45">10</text>
+<text x="52" y="393" font-size="15" fill="#ECEAE6" font-weight="600" text-anchor="start" opacity="0.45">Power and environment</text>
+<text x="30" y="412" font-size="12" fill="#918E88" font-weight="400" text-anchor="start" opacity="0.45">seven UPS, nine ATS, the room. Everything above is fed by it; the shutdown design is its own layer&#x27;s.</text>
+<text x="742" y="436" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">rests on: read upward. Generated from data/diagrams/stack.yaml.</text>
+</svg>

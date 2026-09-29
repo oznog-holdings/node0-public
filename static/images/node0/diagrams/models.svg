@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 347" width="100%" role="img" aria-labelledby="flow-models-t flow-models-d" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif">
+<title id="flow-models-t">The model path</title><desc id="flow-models-d">A consumer asks the gateway by role alias with its own key; the key&#x27;s tag decides whether the request may leave the site. Local backends serve most of it; an external deployment answers only for a key that carries the tag.</desc>
+<defs><marker id="flow-models-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#918E88"/></marker><marker id="flow-models-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#EA7170"/></marker></defs>
+<rect width="980" height="347" fill="#0D0D0D"/>
+<text x="18" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">consumer</text>
+<line x1="18" y1="40" x2="206" y2="40" stroke="#2A2A2A"/>
+<text x="270" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">one address</text>
+<line x1="270" y1="40" x2="458" y2="40" stroke="#2A2A2A"/>
+<text x="522" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">local backends</text>
+<line x1="522" y1="40" x2="710" y2="40" stroke="#2A2A2A"/>
+<text x="774" y="34" font-size="11" fill="#EA7170" font-weight="400" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">external</text>
+<line x1="774" y1="40" x2="962" y2="40" stroke="#2A2A2A"/>
+<path d="M206,97.0 C238.0,97.0 238.0,103.5 270,103.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-models-a)" opacity="0.9"/>
+<path d="M206,196.5 C238.0,196.5 238.0,103.5 270,103.5" fill="none" stroke="#918E88" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-models-a)" opacity="0.9"/>
+<path d="M458,103.5 C490.0,103.5 490.0,88.5 522,88.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-models-a)" opacity="0.9"/>
+<path d="M458,103.5 C490.0,103.5 490.0,179.5 522,179.5" fill="none" stroke="#918E88" stroke-width="1.2" marker-end="url(#flow-models-a)" opacity="0.9"/>
+<path d="M458,103.5 C490.0,103.5 490.0,228 502.0,228 L730.0,228 C742.0,228 742.0,96.0 774,96.0" fill="none" stroke="#EA7170" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#flow-models-ar)" opacity="0.9"/>
+<rect x="18" y="56" width="188" height="82" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">an agent, script or</text>
+<text x="28" y="92" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">service</text>
+<text x="28" y="109" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">asks for a role: chat, code,</text>
+<text x="28" y="124" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">embed, ocr, probe...</text>
+<rect x="18" y="164" width="188" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="28" y="183" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">its own key</text>
+<text x="28" y="200" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">tag: local-only, or external</text>
+<text x="28" y="215" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">allowed</text>
+<rect x="270" y="56" width="188" height="95" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="280" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">llm-gw1: LiteLLM</text>
+<text x="280" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">one address for the fleet;</text>
+<text x="280" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">spend and latency metered per</text>
+<text x="280" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">key; fails over between</text>
+<text x="280" y="137" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">backends</text>
+<rect x="522" y="56" width="188" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="532" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">di1 to di5</text>
+<text x="532" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">llama-swap loads models on</text>
+<text x="532" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">demand; 7 GPUs, 136 GiB VRAM</text>
+<rect x="522" y="147" width="188" height="65" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="532" y="166" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">two serving laptops</text>
+<text x="532" y="183" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">the largest model, from 128</text>
+<text x="532" y="198" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">GiB of unified memory</text>
+<rect x="774" y="56" width="188" height="80" fill="#181818" stroke="#2A2A2A" stroke-width="1"/>
+<text x="784" y="75" font-size="13" fill="#ECEAE6" font-weight="600" text-anchor="start">external deployments</text>
+<text x="784" y="92" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">subscription-backed; only for</text>
+<text x="784" y="107" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">a tagged key; a tripwire</text>
+<text x="784" y="122" font-size="11" fill="#918E88" font-weight="400" text-anchor="start">inspects outbound traffic</text>
+<rect x="276.0" y="154" width="101.0" height="14" fill="#0D0D0D" opacity="0.92"/>
+<text x="326.5" y="165" font-size="10" fill="#EA7170" font-weight="400" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">tagged key only</text>
+<line x1="18" y1="263" x2="962" y2="263" stroke="#2A2A2A"/>
+<text x="18" y="281" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">A key without the tag cannot reach an external deployment at all. The gate is proven daily by attempting the forbidden call and confirming the refusal.</text>
+<text x="18" y="311" font-size="11" fill="#A8A5A0" font-weight="400" text-anchor="start">A new model is a registry entry behind the gateway, not a project. A new compute box is one more backend.</text>
+<text x="962" y="341" font-size="10" fill="#918E88" font-weight="400" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">Generated from data/diagrams/models.yaml.</text>
+</svg>
