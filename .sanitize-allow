@@ -5,3 +5,5 @@
 rule=credential-store-name Bitwarden # the seed's hosted password manager, named on the seed pages by Christoph's rule that the seed names its parts (20260928)
 rule=credential-store-name re:(?i)(https?://)?(www\.)?bitwarden\.com/? # the link to Bitwarden's home page in the seed's projects table (20260928)
 rule=ipv4-literal re:192\.168\.(?:1|20|30)\.0 # the Seed's own LAN, guest and IoT networks in the rung 6 table (publication policy, 20260928)
+rule=private-rule-19 LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0= # the gate's own test fixture: a bare "BEGIN OPENSSH PRIVATE KEY" header, no key
+rule=private-rule-19 c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUV4YW1wbGVFeGFtcGxlRXhhbXBsZUV4YW1wbGUgaG9zdA== # the gate's own test fixture: a made-up public key of "ExampleExample"
