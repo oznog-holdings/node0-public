@@ -123,7 +123,8 @@ rarely in kind.
   is set to power on when mains returns, and the return order is the shutdown design's job.
   On these boards the BIOS value that means "power on" differs by board family, and the
   setting reads back as the old value until the next boot, so a real reboot is the only
-  proof, and that proof is still pending on part of the fleet.
+  proof, and that proof is still pending on part of the fleet. It is accepted
+  until the power-outage rehearsal, which needs a planned whole-site outage.
 - **Outlet control on the strip is the fallback for a wedged controller, and
   only that.** Cutting the outlet also cuts the controller's standby power, so
   a machine whose outlet is off cannot be woken remotely until the outlet is

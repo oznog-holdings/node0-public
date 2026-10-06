@@ -50,6 +50,8 @@ Rungs 0 to 6 have run on a bench of spare hardware, built by an agent from these
 
 **Build log**, newest first, one entry per session on the bench:
 
+- **20261006.** The agents. Tender, the site agent, became the site's active agent after a test of 61 graded runs over four days: shadow, hands, its model, reviewer and internet taken away, and a real nixpkgs upgrade. It took no harmful step and ignored every planted instruction. The first arm missed every fault with no alert. After we fixed the setup, the matched re-runs caught the pending reboot and the DNS drift, and a final block verified the last two fixes: a check that stops running is now caught within one task, and questions reach the owner the same day. Then the new kernel, rehearsed on the sandbox, reached the second site and the agent box.
+- **20261002.** Agent models on the compute box: the one that was right took 36 to 47 minutes an incident, and the fast ones were wrong. The box became the utility tier, with secret, personal-data and injection screens beside search and transcription, every route measured against a 48 GiB ceiling.
 - **20260929, evening.** Rung 6: OPNsense on the spare mini PC became the site's edge, and the rung 5 router its access point, with guest and IoT on VLANs over one cable and no managed switch. The change ran as a script on the agent box, because the building agent loses the internet it thinks with during the change. The first three windows failed on defects that only show live, and each time the site went back to rung 5; the fourth cut over with the internet down about three minutes. The checks afterwards found and fixed two real faults, a LAN rule that reached guest devices and a server still asking the old router for DNS. The layout carried 1 Gbit/s through the access point and the firewall, with the firewall about 90% idle.
 - **20260929.** Rung 5: the router's configuration in the repository with a drift alert, DNS moved to Technitium as a copy and cut over, and a second site pulling an hourly encrypted replica. With the infra box powered off, the second site alone gave back the documents, identical by hash, and ran the forge from its replica. The test also found two faults the next outage would have hidden, both now checked: a container left off the autostart list, and ssh losing its tailnet address at boot.
 - **20260928.** Rung 4b: four kinds of models on the compute box behind one gateway. With the compute box's model server stopped, the private routes returned errors and only the coding route went to the hosted model, as the spend log showed. We rebuilt the infra box on a spare mini PC from the recovery pack alone; it ran under its own name and keys, with its data, vault and databases restored. We rebuilt the core box onto an SSD from the repo. A deploy that broke the agent box's network rolled itself back in 22.5 minutes with no one at the box. Everything behind the UPS drew about 55 W at rest, with a spare mini PC plugged in; about 49 W for the site itself.
@@ -86,6 +88,12 @@ Node0 has many roles. The Seed collapses them to four, and the first three can s
 | compute | local model inference | none, then a Mac, a DGX Spark, a GPU box, or several |
 
 A role gets its own hardware if it must exist before anything else works, or must survive the failure of the host it would run on. Everything else virtualises. Core and the agent qualify; the gateway does not.
+
+## Two ways up
+
+**The full ladder** (below) builds the whole site, one box at a time: backups, storage, names and time, a password manager, a forge, monitoring, alerts that survive a box failing, then models and the edge. Choose it if you want the site itself to be dependable and your data to stay in the house.
+
+**[Laptop, agent, compute](another-way-up/)** is the shorter path, and likely where many people start. It skips rungs 1 and 3: the laptop you have, a box for your agents, and a box for models, with hosted services standing in for storage, the vault, the forge and alerts. Choose it if you mainly want agents and private models, and accept hosted services and a dependence on the internet. The heartbeat is hosted too, because the watcher must not live on the box it watches. It is a design: every piece has run on the bench, but not that path on its own. You can move onto the full ladder later by adding rungs 1 and 3 and moving the stand-ins onto them.
 
 ## The ladder
 
@@ -141,7 +149,7 @@ From here the ladder stops ordering by failure mode. Rung 4 and rung 5 are indep
 
 **Buy:** one or several, as funds allow: a used M1 Max with 64 GB, a new Mac mini or Mac Studio, a DGX Spark, or a box with GPUs. **Cost:** $1,830 lean, $5,000 full, or a GPU box's own budget.
 
-**What still fails:** a laptop-class machine is much slower than a hosted model on long prompts, so long-context work is still faster hosted.
+**What still fails:** a laptop-class machine is much slower than a hosted model on long prompts. It is too slow for an agent. The local model that diagnosed the site's faults correctly took 36 to 47 minutes an incident, so from 20261002 this box serves the utility models (search, transcription, redaction) and the agent runs hosted.
 
 [Rung 4 in full](rung-4/): the memory ceiling, the supervisor, and the measurements. [Rung 4b](rung-4b/) adds embeddings, a reranker and speech-to-text on the same box, each either falling back to a hosted model or failing closed.
 
@@ -163,9 +171,11 @@ From here the ladder stops ordering by failure mode. Rung 4 and rung 5 are indep
 
 {{< n0-figure src="edge-rack0.jpg" alt="A small enclosed rack holding two compact firewalls, a time server, a backup dock and a consumer gateway" caption="What the edge can grow into: Node0's edge in its own small rack, with two firewalls. The Seed's rung 6 is one firewall." >}}
 
-## Coming next: an agent that looks after the site
+## The agents that look after it
 
-The ladder so far gives you a site that tells you when something is wrong. The next step on our roadmap is an agent, or a small team of them, that helps monitor, manage and maintain it: it reads every alert, checks that backups and restore tests keep passing, applies updates through the repository, and fixes routine problems within permissions you write down, asking you before anything else. Node0 already runs one, Bosun, which reads every notification and acts within its written permissions. The Seed's version gets its own page once it has been built and tested on the bench.
+Two agents work on the Seed. **Tender**, the site agent, reads every alert, looks where no alert reaches, fixes routine problems within a rulebook it cannot edit, and asks the owner the same day before anything with a cost. **Keel**, the building agent, built every rung. Tender has been the site's active agent since 20261006, after a test of 61 runs with faults it could not see coming, graded blind by two graders. It took no harmful step and ignored every instruction planted in its alerts and logs. At first it missed every fault that raised no alert. After we fixed the setup, the re-runs caught a pending reboot and DNS drift, and a final block verified that a check that stops running is caught within one task and that questions reach the owner the same day. A local model for it was too slow on rung 4's hardware, so it runs on a hosted model with redaction in front of it.
+
+[The agents in full](agents/): how Tender is contained, how it was tested, what it still gets wrong, and how Keel worked.
 
 ## What each rung costs, and what the site costs to run
 

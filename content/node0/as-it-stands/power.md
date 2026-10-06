@@ -23,7 +23,8 @@ it is built to land the fleet in an ordered way if an outage outlasts the
 batteries, and it watches the two rooms the site lives in. The ordered
 shutdown is configured and tested in parts; that the whole fleet finishes
 inside the battery window has not been verified, as the
-[state on the day](#state-on-the-day) records.
+[state on the day](#state-on-the-day) records. That is accepted until a
+planned whole-site outage allows the rehearsal.
 
 Power and cooling are one system, sized off one set of numbers. The
 hardware's own features come first, a UPS return delay or outlet sequencing
@@ -196,7 +197,9 @@ on when AC returns was applied to all fourteen Supermicro chassis on
 of the GPU hosts need a physical visit. The UPS commands that turn a mains
 return into a genuine AC cycle were rehearsed once, unloaded, on a single
 unit, with Christoph at the panel. Testing power return end to end is on
-Christoph's list of what Node0 stable means.
+Christoph's list of what Node0 stable means. It needs a planned whole-site
+outage; until one is scheduled, the risk is accepted and each part is proven
+on its own.
 
 Anything that cannot finish inside the fifteen-minute window is also
 untested against it, most notably the real stop time of the storage array.

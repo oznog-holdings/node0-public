@@ -34,4 +34,4 @@ edges:
   - {from: ats3, to: h3}
 notes:
   - "The shutdown design: fifteen minutes of low battery is the sole trigger; storage and hypervisors go down and come back as one unit; core survives a power event because it must be the box that handles it."
-  - "The two meters disagree by design: strips read infeed, UPS units read output. The site quotes UPS output. The power-outage rehearsal, tested by causing the condition, is still pending."
+  - "The two meters disagree by design: strips read infeed, UPS units read output. The site quotes UPS output. The power-outage rehearsal, tested by causing the condition, is still pending: it needs a planned whole-site outage."
